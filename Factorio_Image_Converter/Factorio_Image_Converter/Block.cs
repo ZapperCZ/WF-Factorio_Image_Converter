@@ -8,7 +8,9 @@ namespace Factorio_Image_Converter
 {
     class Block
     {
-        //Position
-        //ID
+        string _name;           //Name of the block
+        int _x;                 //Position relative to blueprint, -1 for blocks in the AvailableBlockList
+        int _y;
+        string _color;          //Hex color
     }
 }

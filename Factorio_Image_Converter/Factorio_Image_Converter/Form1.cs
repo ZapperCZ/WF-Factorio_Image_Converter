@@ -17,8 +17,12 @@ namespace Factorio_Image_Converter
         string ImagePath = "";
         int DefaultPBWidth;
         int DefaultPBHeight;
+        int DefaultFormWidth;
+        int DefaultFormHeight;
         Image OriginalImage;
         Image ResultImage;
+        List<Block> AvailableBlocks;
+        List<Block> ImageBlocks;
 
         public Form1()
         {
@@ -42,7 +46,8 @@ namespace Factorio_Image_Converter
                     OriginalImage = Image.FromFile(ImagePath);
                 }
             }
-            Debug.WriteLine(ImagePath);
+            //TODO: Image too big warning
+
             Switch_Image(null,null);
         }
 
@@ -52,6 +57,8 @@ namespace Factorio_Image_Converter
             //TODO: Create this file
             DefaultPBWidth = pb_Image.Width;
             DefaultPBHeight = pb_Image.Height;
+            DefaultFormWidth = this.Width;
+            DefaultFormHeight = this.Height;
         }
         private void Switch_Image(object sender, EventArgs e)
         {
@@ -67,17 +74,33 @@ namespace Factorio_Image_Converter
 
             if (ImageToSet != null)
             {
-                if (ImageToSet.Width > 800 && ImageToSet.Height > 800)
+                //This is temporary
+                //TODO: Create a more modular solution
+                if (ImageToSet.Width > 800 || ImageToSet.Height > 500)
                 {
-                    //Not like this, add difference between image size and default pb size
-                    this.Size = new Size(ImageToSet.Width / 2, ImageToSet.Height / 2);
+                    this.Size = new Size(DefaultFormWidth-DefaultPBWidth + OriginalImage.Width/2, DefaultFormHeight - DefaultPBHeight + OriginalImage.Height/2);
                 }
                 else
                 {
-                    
+                    this.Size = new Size(DefaultFormWidth - DefaultPBWidth + ImageToSet.Width, DefaultFormHeight - DefaultPBHeight + ImageToSet.Height);
                 }
                 pb_Image.Image = ImageToSet;
             }
+        }
+        private void ConvertImageToBlocks(Image ImageToConvert, int ratio)
+        {
+            //TODO: Convert pixels of image based on the ratio specified to blocks
+            //Ratio specifies how many pixels make up 1 Factorio "pixel" - a ratio of 4 will mean that 1 Factorio "pixel" is made of 4 image pixels
+
+        }
+        private void ConvertBlocksToString(List<Block> BlockList)
+        {
+            //TODO: Find out how to do this (maybe reverse engineer Miditorio?)
+        }
+        private void LoadAvailableBlocks()
+        {
+            //Loads Factorio Blocks and their colors from a JSON file into a List
+            //TODO: Create this file
         }
     }
 }
