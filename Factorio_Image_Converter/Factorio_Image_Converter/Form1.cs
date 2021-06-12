@@ -109,6 +109,7 @@ namespace Factorio_Image_Converter
                     if (!imageCompressed)
                     {
                         Debug.WriteLine("Compress Result");
+                        //Currently abandoned resizing in pursue of deadline, most probably will be added later
                         ImageToSet = OriginalImage;//ResizeImage(ResultImage, OriginalImage.Width / 4, OriginalImage.Height / 4); 
                     }
                 }
@@ -149,7 +150,6 @@ namespace Factorio_Image_Converter
                     if (SenderTB.Name.ToLower().Contains("width"))
                     {
                         x = Convert.ToInt32(SenderTB.Text);
-
                     }
                     else
                     {
