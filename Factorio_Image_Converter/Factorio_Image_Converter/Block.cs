@@ -9,8 +9,23 @@ namespace Factorio_Image_Converter
     class Block
     {
         string _name;           //Name of the block
-        int _x;                 //Position relative to blueprint, -1 for blocks in the AvailableBlockList
-        int _y;
         string _color;          //Hex color
+
+        public string Name
+        {
+            get { return _name; }
+            set { _name = value; }
+        }
+        public string Color
+        {
+            get { return _color; }
+            set { _color = value; }
+        }
+
+        public Block(string name, string color)
+        {
+            Name = name;
+            Color = color;
+        }
     }
 }

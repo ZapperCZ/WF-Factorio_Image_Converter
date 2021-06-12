@@ -109,7 +109,7 @@ namespace Factorio_Image_Converter
                     if (!imageCompressed)
                     {
                         Debug.WriteLine("Compress Result");
-                        ImageToSet = ResizeImage(ResultImage, OriginalImage.Width / 4, OriginalImage.Height / 4); 
+                        ImageToSet = OriginalImage;//ResizeImage(ResultImage, OriginalImage.Width / 4, OriginalImage.Height / 4); 
                     }
                 }
                 pb_Image.Image = ImageToSet;
