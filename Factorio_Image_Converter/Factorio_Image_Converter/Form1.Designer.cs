@@ -291,7 +291,7 @@ namespace Factorio_Image_Converter
             this.Controls.Add(this.pb_Image);
             this.MinimumSize = new System.Drawing.Size(1102, 405);
             this.Name = "Form1";
-            this.Text = "Factorio Image Converter";
+            this.Text = "s";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pb_Image)).EndInit();
             this.Group_Tools.ResumeLayout(false);

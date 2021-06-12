@@ -4,6 +4,8 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -15,12 +17,13 @@ namespace Factorio_Image_Converter
     public partial class Form1 : Form
     {
         bool IsRatioLocked;
+        bool imageCompressed;
         string imagePath = "";
         int defaultPBWidth;
         int defaultPBHeight;
         int defaultFormWidth;
         int defaultFormHeight;
-        int compressionRate;
+        int compressionRatio;
         int previousWidth;
         int previousHeight;
         Image OriginalImage;
@@ -36,7 +39,7 @@ namespace Factorio_Image_Converter
         {
             LoadAvailableBlocks();      //Doesn't do anything atm
 
-            compressionRate = 1;
+            compressionRatio = 1;
 
             chk_LockRatio_CheckedChanged(null, null);
             defaultPBWidth = pb_Image.Width;
@@ -50,7 +53,7 @@ namespace Factorio_Image_Converter
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
                 openFileDialog.InitialDirectory = "c:\\";
-                openFileDialog.Filter = "Image files (*.jpg;*.png)|*.jpg;*.png";    //Add more image formats
+                openFileDialog.Filter = "Image files (*.png;*.jpg)|*.png;*.jpg";    //Add more image formats
                 openFileDialog.FilterIndex = 1;
                 openFileDialog.RestoreDirectory = true;     //Opens up where the user chose the last file
 
@@ -60,6 +63,8 @@ namespace Factorio_Image_Converter
 
                     //Save the image
                     OriginalImage = Image.FromFile(imagePath);
+                    ResultImage = Image.FromFile(imagePath);
+                    imageCompressed = false;
                 }
             }
             //TODO: Image too big warning
@@ -69,22 +74,26 @@ namespace Factorio_Image_Converter
 
         private void Switch_Image(object sender, EventArgs e)
         {
+            Debug.WriteLine("Image compressed > " + imageCompressed);
             Image ImageToSet;
             if (rb_Original.Checked)
             {
                 ImageToSet = OriginalImage;
+                Debug.WriteLine("RB - orig");
             }
             else
             {
                 ImageToSet = ResultImage;
+                Debug.WriteLine("RB - result");
             }
 
             if (ImageToSet != null)
             {
-                if(ImageToSet == OriginalImage && pb_Image.Image!=OriginalImage)
+                if(ImageToSet == OriginalImage || pb_Image.Image!=OriginalImage)
                 {
                     //This is temporary
                     //TODO: Create a more modular solution
+                    Debug.WriteLine("Set Orig");
                     if (ImageToSet.Width > 800 || ImageToSet.Height > 500)
                     {
                         this.Size = new Size(defaultFormWidth - defaultPBWidth + OriginalImage.Width / 2, defaultFormHeight - defaultPBHeight + OriginalImage.Height / 2);
@@ -94,13 +103,19 @@ namespace Factorio_Image_Converter
                         this.Size = new Size(defaultFormWidth - defaultPBWidth + ImageToSet.Width, defaultFormHeight - defaultPBHeight + ImageToSet.Height);
                     }
                 }
+                else if (ImageToSet == ResultImage)
+                {
+                    Debug.WriteLine("Set Result");
+                    if (!imageCompressed)
+                    {
+                        Debug.WriteLine("Compress Result");
+                        ImageToSet = ResizeImage(ResultImage, OriginalImage.Width / 4, OriginalImage.Height / 4); 
+                    }
+                }
                 pb_Image.Image = ImageToSet;
             }
         }
-        private void ResizeImage(int x = 0, int y = 0)
-        {
-            //Resizes the image, if ratio is locked only 1 value has to be specified
-        }
+
         private void ConvertImageToBlocks(Image ImageToConvert, int ratio)
         {
             //TODO: Convert pixels of image based on the ratio specified to blocks
@@ -143,8 +158,9 @@ namespace Factorio_Image_Converter
                 }
             }
 
-
-            ResizeImage();
+            
+            //ResizeImage();
+            imageCompressed = false;
         }
         private int ChangeResolutionWithRatio(int changedValue, int valueToAdjust)
         {
@@ -156,7 +172,52 @@ namespace Factorio_Image_Converter
 
         private void cb_Pixel_SelectedIndexChanged(object sender, EventArgs e)
         {
+            compressionRatio = Convert.ToInt32(cb_Pixel.Text.Substring(0,cb_Pixel.Text.IndexOf("x")));
 
+            //FIX: Crashes if no image is loaded
+            tb_ImageWidth.Text = (OriginalImage.Width / compressionRatio).ToString();
+            tb_ImageHeight.Text = (OriginalImage.Height / compressionRatio).ToString();
+
+            imageCompressed = false;
+        }
+        /*
+        private void CompressImage()
+        {
+            //FIX: Crashes if no compression rate given
+
+            //temp code for testing purposes
+            //Go through all pixels
+            //Take average of {compressionRatio} neighbouring pixels
+            //Write the average to a new image
+
+            imageCompressed = true;
+        }
+        */
+
+        public static Bitmap ResizeImage(Image image, int width, int height)
+        {
+            var destRect = new Rectangle(0, 0, width, height);
+            var destImage = new Bitmap(width, height);
+
+            destImage.SetResolution(image.HorizontalResolution, image.VerticalResolution);
+
+            using (var graphics = Graphics.FromImage(destImage))
+            {
+                graphics.CompositingMode = CompositingMode.SourceCopy;
+                graphics.CompositingQuality = CompositingQuality.HighSpeed;
+                graphics.InterpolationMode = InterpolationMode.Low;
+                graphics.SmoothingMode = SmoothingMode.None;
+                graphics.PixelOffsetMode = PixelOffsetMode.None;
+
+                using (var wrapMode = new ImageAttributes())
+                {
+                    wrapMode.SetWrapMode(WrapMode.TileFlipXY);
+                    graphics.DrawImage(image, destRect, 0, 0, image.Width, image.Height, GraphicsUnit.Pixel, wrapMode);
+                }
+            }
+
+            destImage.Save("cunt.bmp");
+            return destImage;
         }
     }
 }
