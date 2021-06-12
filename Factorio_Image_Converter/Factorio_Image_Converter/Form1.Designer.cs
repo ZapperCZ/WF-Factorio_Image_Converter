@@ -62,9 +62,9 @@ namespace Factorio_Image_Converter
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pb_Image.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pb_Image.Location = new System.Drawing.Point(12, 12);
-            this.pb_Image.MinimumSize = new System.Drawing.Size(540, 268);
+            this.pb_Image.MinimumSize = new System.Drawing.Size(264, 268);
             this.pb_Image.Name = "pb_Image";
-            this.pb_Image.Size = new System.Drawing.Size(552, 527);
+            this.pb_Image.Size = new System.Drawing.Size(654, 522);
             this.pb_Image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_Image.TabIndex = 0;
             this.pb_Image.TabStop = false;
@@ -74,7 +74,7 @@ namespace Factorio_Image_Converter
             this.rb_Original.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.rb_Original.AutoSize = true;
             this.rb_Original.Checked = true;
-            this.rb_Original.Location = new System.Drawing.Point(63, 562);
+            this.rb_Original.Location = new System.Drawing.Point(12, 557);
             this.rb_Original.Name = "rb_Original";
             this.rb_Original.Size = new System.Drawing.Size(134, 24);
             this.rb_Original.TabIndex = 1;
@@ -87,7 +87,7 @@ namespace Factorio_Image_Converter
             // 
             this.rb_Result.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.rb_Result.AutoSize = true;
-            this.rb_Result.Location = new System.Drawing.Point(338, 562);
+            this.rb_Result.Location = new System.Drawing.Point(347, 557);
             this.rb_Result.Name = "rb_Result";
             this.rb_Result.Size = new System.Drawing.Size(127, 24);
             this.rb_Result.TabIndex = 2;
@@ -114,7 +114,7 @@ namespace Factorio_Image_Converter
             this.Group_Tools.Controls.Add(this.btn_color);
             this.Group_Tools.Controls.Add(this.cb_size);
             this.Group_Tools.Controls.Add(this.btn_palette);
-            this.Group_Tools.Location = new System.Drawing.Point(586, 62);
+            this.Group_Tools.Location = new System.Drawing.Point(688, 62);
             this.Group_Tools.Name = "Group_Tools";
             this.Group_Tools.Size = new System.Drawing.Size(488, 69);
             this.Group_Tools.TabIndex = 4;
@@ -147,7 +147,7 @@ namespace Factorio_Image_Converter
             this.Group_Resolution.Controls.Add(this.tb_ImageHeight);
             this.Group_Resolution.Controls.Add(this.label1);
             this.Group_Resolution.Controls.Add(this.lb_Width);
-            this.Group_Resolution.Location = new System.Drawing.Point(586, 137);
+            this.Group_Resolution.Location = new System.Drawing.Point(688, 137);
             this.Group_Resolution.Name = "Group_Resolution";
             this.Group_Resolution.Size = new System.Drawing.Size(488, 69);
             this.Group_Resolution.TabIndex = 5;
@@ -205,7 +205,7 @@ namespace Factorio_Image_Converter
             this.Group_Automation.Controls.Add(this.cb_Pixel);
             this.Group_Automation.Controls.Add(this.btn_AutoResolution);
             this.Group_Automation.Controls.Add(this.btn_AutoPalette);
-            this.Group_Automation.Location = new System.Drawing.Point(586, 212);
+            this.Group_Automation.Location = new System.Drawing.Point(688, 212);
             this.Group_Automation.Name = "Group_Automation";
             this.Group_Automation.Size = new System.Drawing.Size(488, 69);
             this.Group_Automation.TabIndex = 6;
@@ -248,7 +248,7 @@ namespace Factorio_Image_Converter
             // btn_Import
             // 
             this.btn_Import.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Import.Location = new System.Drawing.Point(586, 557);
+            this.btn_Import.Location = new System.Drawing.Point(688, 552);
             this.btn_Import.Name = "btn_Import";
             this.btn_Import.Size = new System.Drawing.Size(208, 43);
             this.btn_Import.TabIndex = 7;
@@ -259,7 +259,7 @@ namespace Factorio_Image_Converter
             // btn_Export
             // 
             this.btn_Export.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Export.Location = new System.Drawing.Point(866, 557);
+            this.btn_Export.Location = new System.Drawing.Point(968, 552);
             this.btn_Export.Name = "btn_Export";
             this.btn_Export.Size = new System.Drawing.Size(208, 43);
             this.btn_Export.TabIndex = 8;
@@ -269,7 +269,7 @@ namespace Factorio_Image_Converter
             // btn_About
             // 
             this.btn_About.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_About.Location = new System.Drawing.Point(1046, 12);
+            this.btn_About.Location = new System.Drawing.Point(1148, 12);
             this.btn_About.Name = "btn_About";
             this.btn_About.Size = new System.Drawing.Size(28, 26);
             this.btn_About.TabIndex = 9;
@@ -279,7 +279,7 @@ namespace Factorio_Image_Converter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1095, 617);
+            this.ClientSize = new System.Drawing.Size(1197, 612);
             this.Controls.Add(this.btn_About);
             this.Controls.Add(this.btn_Export);
             this.Controls.Add(this.btn_Import);
@@ -289,9 +289,9 @@ namespace Factorio_Image_Converter
             this.Controls.Add(this.rb_Result);
             this.Controls.Add(this.rb_Original);
             this.Controls.Add(this.pb_Image);
-            this.MinimumSize = new System.Drawing.Size(1102, 405);
+            this.MinimumSize = new System.Drawing.Size(829, 405);
             this.Name = "Form1";
-            this.Text = "s";
+            this.Text = "Factorio Image Converter";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pb_Image)).EndInit();
             this.Group_Tools.ResumeLayout(false);

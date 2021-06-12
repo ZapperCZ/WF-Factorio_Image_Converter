@@ -28,8 +28,8 @@ namespace Factorio_Image_Converter
         int previousHeight;
         Image OriginalImage;
         Image ResultImage;
-        List<Block> AvailableBlocks;
-        List<Block> ImageBlocks;
+        List<UBlock> AvailableBlocks;
+        List<UBlock> ImageBlocks;
 
         public Form1()
         {
@@ -123,14 +123,14 @@ namespace Factorio_Image_Converter
             //Ratio specifies how many pixels make up 1 Factorio "pixel" - a ratio of 4 will mean that 1 Factorio "pixel" is made of 4 image pixels
 
         }
-        private void ConvertBlocksToString(List<Block> BlockList)
+        private void ConvertBlocksToString(List<UBlock> BlockList)
         {
             //TODO: Find out how to do this (maybe reverse engineer Miditorio?)
         }
         private void LoadAvailableBlocks()
         {
             //Loads Factorio Blocks and their colors from a JSON file into a List
-            //TODO: Create this file
+            
         }
 
         private void chk_LockRatio_CheckedChanged(object sender, EventArgs e)
