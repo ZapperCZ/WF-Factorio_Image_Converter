@@ -216,7 +216,7 @@ namespace Factorio_Image_Converter
                 }
             }
 
-            destImage.Save("cunt.bmp");
+            destImage.Save("output.bmp");
             return destImage;
         }
     }

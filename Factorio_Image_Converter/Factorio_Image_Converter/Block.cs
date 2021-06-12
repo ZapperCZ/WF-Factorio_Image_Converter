@@ -10,6 +10,7 @@ namespace Factorio_Image_Converter
     {
         string _name;           //Name of the block
         string _color;          //Hex color
+        bool _tile;             //Is block tile
 
         public string Name
         {
@@ -21,11 +22,17 @@ namespace Factorio_Image_Converter
             get { return _color; }
             set { _color = value; }
         }
+        public bool Tile
+        {
+            get { return _tile; }
+            set { _tile = value; }
+        }
 
-        public Block(string name, string color)
+        public Block(string name, string color, bool isTile)
         {
             Name = name;
             Color = color;
+            Tile = isTile;
         }
     }
 }

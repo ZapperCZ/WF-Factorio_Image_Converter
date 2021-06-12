@@ -7,6 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Factorio_Image_Converter", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{953F9C21-EDDA-4923-8FAC-0E179F9FE7AC}"
 	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\..\Users\user\Downloads\Palette-Original-JSON.json = ..\..\..\..\..\Users\user\Downloads\Palette-Original-JSON.json
 		..\..\..\..\..\Users\user\Downloads\Usable-Blocks.json = ..\..\..\..\..\Users\user\Downloads\Usable-Blocks.json
 	EndProjectSection
 EndProject
