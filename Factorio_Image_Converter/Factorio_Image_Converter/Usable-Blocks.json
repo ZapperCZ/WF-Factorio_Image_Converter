@@ -1,3 +1,104 @@
 {
-
+  "usable-blocks": {
+    "u-blocks": [
+      {
+        "name": "wooden-chest",
+        "color": "#006194"
+      },
+      {
+        "name": "iron-chest",
+        "color": "#006194"
+      },
+      {
+        "name": "burner-inserter",
+        "color": "#006194"
+      },
+      {
+        "name": "stone-furnace",
+        "color": "#006194"
+      },
+      {
+        "name": "inserter",
+        "color": "#006194"
+      },
+      {
+        "name": "substation",
+        "color": "#006194"
+      },
+      {
+        "name": "pipe-to-ground",
+        "color": "#196594"
+      },
+      {
+        "name": "heat-pipe",
+        "color": "#3a81ad"
+      },
+      {
+        "name": "pipe",
+        "color": "#3a81ad"
+      },
+      {
+        "name": "pump",
+        "color": "#6b9ab5"
+      },
+      {
+        "name": "stone-wall",
+        "color": "#cedbce"
+      },
+      {
+        "name": "straight-rail",
+        "color": "#8c8e8c"
+      },
+      {
+        "name": "accumulator",
+        "color": "#7b797b"
+      },
+      {
+        "name": "gate",
+        "color": "#7b7d7b"
+      },
+      {
+        "name": "underground-belt",
+        "color": "#735900"
+      },
+      {
+        "name": "gun-turret",
+        "color": "#cea619"
+      },
+      {
+        "name": "transport-belt",
+        "color": "#cea619"
+      },
+      {
+        "name": "splitter",
+        "color": "#ffd200"
+      },
+      {
+        "name": "laser-turret",
+        "color": "#de2d29"
+      }
+    ],
+    "u-tiles": [
+      {
+        "name": "refined-concrete",
+        "color": "#28152a"
+      },
+      {
+        "name": "concrete",
+        "color": "#3a3d3a"
+      },
+      {
+        "name": "stone-path",
+        "color": "#52514a"
+      },
+      {
+        "name": "refined-hazard-concrete-left",
+        "color": "#816d30"
+      },
+      {
+        "name": "hazard-concrete-left",
+        "color": "#b58e21"
+      }
+    ]
+  }
 }
