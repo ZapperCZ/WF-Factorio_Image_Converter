@@ -10,5 +10,6 @@ namespace Factorio_Image_Converter
     {
         public string name { get; set; }
         public string color { get; set; }
+        public string occupied_space { get; set; }
     }
 }

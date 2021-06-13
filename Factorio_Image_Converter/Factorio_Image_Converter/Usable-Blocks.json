@@ -3,79 +3,98 @@
     "u-blocks": [
       {
         "name": "wooden-chest",
-        "color": "#006194"
+        "color": "#006194",
+        "occupied_space": "1x1"
       },
       {
         "name": "iron-chest",
-        "color": "#006194"
+        "color": "#006194",
+        "occupied_space": "1x1"
       },
       {
         "name": "burner-inserter",
-        "color": "#006194"
+        "color": "#006194",
+        "occupied_space": "1x1"
       },
       {
         "name": "stone-furnace",
-        "color": "#006194"
+        "color": "#006194",
+        "occupied_space": "1x1"
       },
       {
         "name": "inserter",
-        "color": "#006194"
+        "color": "#006194",
+        "occupied_space": "1x1"
       },
       {
         "name": "substation",
-        "color": "#006194"
+        "color": "#006194",
+        "occupied_space": "2x2"
       },
       {
         "name": "pipe-to-ground",
-        "color": "#196594"
+        "color": "#196594",
+        "occupied_space": "1x1"
       },
       {
         "name": "heat-pipe",
-        "color": "#3a81ad"
+        "color": "#3a81ad",
+        "occupied_space": "1x1"
       },
       {
         "name": "pipe",
-        "color": "#3a81ad"
+        "color": "#3a81ad",
+        "occupied_space": "1x1"
       },
       {
         "name": "pump",
-        "color": "#6b9ab5"
+        "color": "#6b9ab5",
+        "occupied_space": "1x2"
       },
       {
         "name": "stone-wall",
-        "color": "#cedbce"
+        "color": "#cedbce",
+        "occupied_space": "1x1"
       },
       {
         "name": "straight-rail",
-        "color": "#8c8e8c"
+        "color": "#8c8e8c",
+        "occupied_space": "2x2"
       },
       {
         "name": "accumulator",
-        "color": "#7b797b"
+        "color": "#7b797b",
+        "occupied_space": "2x2"
       },
       {
         "name": "gate",
-        "color": "#7b7d7b"
+        "color": "#7b7d7b",
+        "occupied_space": "1x1"
       },
       {
         "name": "underground-belt",
-        "color": "#735900"
+        "color": "#735900",
+        "occupied_space": "1x1"
       },
       {
         "name": "gun-turret",
-        "color": "#cea619"
+        "color": "#cea619",
+        "occupied_space": "2x2"
       },
       {
         "name": "transport-belt",
-        "color": "#cea619"
+        "color": "#cea619",
+        "occupied_space": "1x1"
       },
       {
         "name": "splitter",
-        "color": "#ffd200"
+        "color": "#ffd200",
+        "occupied_space": "2x1"
       },
       {
         "name": "laser-turret",
-        "color": "#de2d29"
+        "color": "#de2d29",
+        "occupied_space": "2x2"
       }
     ],
     "u-tiles": [

@@ -32,7 +32,8 @@ namespace Factorio_Image_Converter
         List<UBlock> AvailableBlocks;
         List<UTile> AvailableTiles;
         List<Color> AvailableColors;
-        List<UBlock> ImageBlocks;
+        List<Color> ImageColors;
+        Root FactorioBlueprint;
 
         public Form1()
         {
@@ -40,7 +41,13 @@ namespace Factorio_Image_Converter
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            LoadAvailableBlocks();      //Doesn't do anything atm
+            AvailableBlocks = new List<UBlock>();
+            AvailableTiles = new List<UTile>();
+            AvailableColors = new List<Color>();
+            ImageColors = new List<Color>();
+            FactorioBlueprint = new Root();
+            LoadAvailableBlocks();
+            LoadAvailableColors();
 
             compressionRatio = 1;
 
@@ -108,23 +115,61 @@ namespace Factorio_Image_Converter
                 }
                 else if (ImageToSet == ResultImage)
                 {
-                    Debug.WriteLine("Set Result");
+                    Debug.WriteLine("Set the Result");
                     if (!imageCompressed)
                     {
-                        Debug.WriteLine("Compress Result");
-                        //Currently abandoned resizing in pursue of deadline, most probably will be added later
-                        ImageToSet = OriginalImage;//ResizeImage(ResultImage, OriginalImage.Width / 4, OriginalImage.Height / 4); 
+                        Debug.WriteLine("Compress the Result");
+                        //GetAllImageColors();
+                        //ConvertImageColors();                 //Will make this work later, when I have time and no deadline.
+                        //CompressImage();                      //Currently abandoned resizing in pursue of deadline, most probably will be added later
+                        ConvertImageToBlocks(ImageToSet);       //This will convert only available colors in the image to blocks, so for now input can be only made from those colors
+
                     }
                 }
                 pb_Image.Image = ImageToSet;
             }
         }
-
-        private void ConvertImageToBlocks(Image ImageToConvert, int ratio)
+        private void GetAllImageColors()
         {
-            //TODO: Convert pixels of image based on the ratio specified to blocks
-            //Ratio specifies how many pixels make up 1 Factorio "pixel" - a ratio of 4 will mean that 1 Factorio "pixel" is made of 4 image pixels
 
+        }
+        private void ConvertImageColors()
+        {
+            //TODO: Convert pixels to avaliable colors
+
+        }
+        private void ConvertImageToBlocks(Image inputImage) //1px = 4 blocks
+        {
+            //TODO: Convert pixels of image to blocks
+            int index = 1;
+            Bitmap bitmap = (Bitmap)inputImage;
+            for (int y = 0; y < bitmap.Height; y++)
+            {
+                for (int x = 0; x < bitmap.Width; x++)
+                {
+                    Color pixelColor = bitmap.GetPixel(x, y);
+                    foreach(UBlock block in AvailableBlocks)
+                    {
+                        //Watch out for rails and other blocks that are larger than 1x1
+                        Color blockColor = ColorTranslator.FromHtml(block.color);
+                        if(pixelColor == blockColor)
+                        {
+                            Entity entity = new Entity();
+                            entity.entity_number = index;
+                            entity.name = block.name;
+                            //All positions must be 0.5 because of rails, rails are 0.0
+                            //Coordinates are based on mathematics, not IT
+                            //Entities are listed through in pairs of 4, so top left, top right, bottom left, bottom right
+                            
+                        }
+                    }
+                }
+            }
+
+        }
+        private void ConvertJSONToBlueprint()
+        {
+            //compress the JSON file using zlib deflate compression level 9, then convert to base64 and put 0 at the start
         }
         private void ConvertBlocksToString(List<UBlock> BlockList)
         {
@@ -143,6 +188,20 @@ namespace Factorio_Image_Converter
             foreach (UTile tile in uRoot.UsableBlocks.UTiles)
             {
                 AvailableTiles.Add(tile);
+            }
+        }
+        private void LoadAvailableColors()
+        {
+            //Reads all colors from available blocks and puts them into a list
+            foreach(UBlock block in AvailableBlocks)
+            {
+                Color newColor = ColorTranslator.FromHtml(block.color);
+                AvailableColors.Add(newColor);
+            }
+            foreach(UTile tile in AvailableTiles)
+            {
+                Color newColor = ColorTranslator.FromHtml(tile.color);
+                AvailableColors.Add(newColor);
             }
         }
 
@@ -171,7 +230,6 @@ namespace Factorio_Image_Converter
                 }
             }
 
-            
             //ResizeImage();
             imageCompressed = false;
         }
