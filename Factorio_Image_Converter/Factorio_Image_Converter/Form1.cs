@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,6 +30,8 @@ namespace Factorio_Image_Converter
         Image OriginalImage;
         Image ResultImage;
         List<UBlock> AvailableBlocks;
+        List<UTile> AvailableTiles;
+        List<Color> AvailableColors;
         List<UBlock> ImageBlocks;
 
         public Form1()
@@ -130,7 +133,17 @@ namespace Factorio_Image_Converter
         private void LoadAvailableBlocks()
         {
             //Loads Factorio Blocks and their colors from a JSON file into a List
-            
+            StreamReader sr = new StreamReader(@"..\..\Usable-Blocks.json");
+            string jsonString = sr.ReadToEnd();
+            URoot uRoot = JsonConvert.DeserializeObject<URoot>(jsonString);
+            foreach (UBlock block in uRoot.UsableBlocks.UBlocks)
+            {
+                AvailableBlocks.Add(block);
+            }
+            foreach (UTile tile in uRoot.UsableBlocks.UTiles)
+            {
+                AvailableTiles.Add(tile);
+            }
         }
 
         private void chk_LockRatio_CheckedChanged(object sender, EventArgs e)
