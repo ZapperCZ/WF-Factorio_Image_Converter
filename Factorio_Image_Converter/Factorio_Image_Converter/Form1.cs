@@ -122,7 +122,6 @@ namespace Factorio_Image_Converter
                         //GetAllImageColors();
                         //ConvertImageColors();                 //Will make this work later, when I have time and no deadline.
                         //CompressImage();                      //Currently abandoned resizing in pursue of deadline, most probably will be added later
-                        ConvertImageToBlocks(ImageToSet);       //This will convert only available colors in the image to blocks, so for now input can be only made from those colors
 
                     }
                 }
@@ -142,30 +141,75 @@ namespace Factorio_Image_Converter
         {
             //TODO: Convert pixels of image to blocks
             int index = 1;
+            int found = 0;
+            int totalPixels = 0;
             Bitmap bitmap = (Bitmap)inputImage;
             for (int y = 0; y < bitmap.Height; y++)
             {
                 for (int x = 0; x < bitmap.Width; x++)
                 {
+                    Debug.WriteLine("x > "+x+" y > "+y);
                     Color pixelColor = bitmap.GetPixel(x, y);
-                    foreach(UBlock block in AvailableBlocks)
+                    string pixelColorHex = ColorTranslator.ToHtml(pixelColor).ToLower();
+                    if (pixelColorHex != "#000000") //transparent
                     {
-                        //Watch out for rails and other blocks that are larger than 1x1
-                        Color blockColor = ColorTranslator.FromHtml(block.color);
-                        if(pixelColor == blockColor)
+                        totalPixels++;
+                        foreach (UBlock block in AvailableBlocks)
                         {
-                            Entity entity = new Entity();
-                            entity.entity_number = index;
-                            entity.name = block.name;
-                            //All positions must be 0.5 because of rails, rails are 0.0
-                            //Coordinates are based on mathematics, not IT
-                            //Entities are listed through in pairs of 4, so top left, top right, bottom left, bottom right
-                            
+                            Debug.WriteLine("pixel > " + pixelColorHex + " block > " + block.color);
+                            if (pixelColorHex == block.color)
+                            {
+                                found++;
+                                //All positions must be 0.5 because of rails, rails are 0.0
+                                //Coordinates are based on mathematics, not IT
+                                //Entities are listed through in pairs of 4, so top left, top right, bottom left, bottom right
+                                int sizeX = Convert.ToInt32(block.occupied_space[0]);
+                                int sizeY = Convert.ToInt32(block.occupied_space[2]);
+                                if (sizeX == 1 && sizeY == 1)
+                                {
+                                    Entity entity1 = new Entity();
+                                    Entity entity2 = new Entity();
+                                    Entity entity3 = new Entity();
+                                    Entity entity4 = new Entity();
+                                    Position pos1 = new Position();
+                                    Position pos2 = new Position();
+                                    Position pos3 = new Position();
+                                    Position pos4 = new Position();
+                                    //Debug.WriteLine(index);
+                                    entity1.entity_number = index++;
+                                    entity2.entity_number = index++;
+                                    entity3.entity_number = index++;
+                                    entity4.entity_number = index++;
+                                    //Debug.WriteLine(index);
+                                    entity1.name = block.name;
+                                    pos1.x = x + 0.5;
+                                    pos1.y = y + 0.5;
+                                }
+                                else if (sizeX == 2 && sizeY == 1)
+                                {
+
+                                }
+                                else if (sizeX == 1 && sizeY == 2)
+                                {
+
+                                }
+                                else if (sizeX == 2 && sizeY == 2)
+                                {
+                                    Entity entity1 = new Entity();
+                                    Position pos = new Position();
+                                    entity1.entity_number = index;
+                                    entity1.name = block.name;
+                                    pos.x = x + 1;
+                                    pos.y = y + 1;
+                                }
+                                index++;
+                                break;
+                            }
                         }
                     }
                 }
             }
-
+            Debug.WriteLine("total normal pixels > " + totalPixels + " pixels recognized > "+ found);
         }
         private void ConvertJSONToBlueprint()
         {
@@ -264,9 +308,10 @@ namespace Factorio_Image_Converter
             imageCompressed = true;
         }
         */
-
+        
         public static Bitmap ResizeImage(Image image, int width, int height)
         {
+            //Will be most probably replaced
             var destRect = new Rectangle(0, 0, width, height);
             var destImage = new Bitmap(width, height);
 
@@ -289,6 +334,11 @@ namespace Factorio_Image_Converter
 
             destImage.Save("output.bmp");
             return destImage;
+        }
+
+        private void btn_Export_Click(object sender, EventArgs e)
+        {
+            ConvertImageToBlocks(ResultImage);       //This will convert only available colors in the image to blocks, so for now input can be only made from those colors
         }
     }
 }

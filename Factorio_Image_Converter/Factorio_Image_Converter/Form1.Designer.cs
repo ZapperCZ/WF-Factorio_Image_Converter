@@ -265,6 +265,7 @@ namespace Factorio_Image_Converter
             this.btn_Export.TabIndex = 8;
             this.btn_Export.Text = "Export";
             this.btn_Export.UseVisualStyleBackColor = true;
+            this.btn_Export.Click += new System.EventHandler(this.btn_Export_Click);
             // 
             // btn_About
             // 

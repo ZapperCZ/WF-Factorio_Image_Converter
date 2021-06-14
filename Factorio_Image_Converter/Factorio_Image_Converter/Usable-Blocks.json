@@ -3,112 +3,112 @@
     "u-blocks": [
       {
         "name": "wooden-chest",
-        "color": "#006194",
+        "color": "#19709e",
         "occupied_space": "1x1"
       },
       {
         "name": "iron-chest",
-        "color": "#006194",
+        "color": "#19709e",
         "occupied_space": "1x1"
       },
       {
         "name": "burner-inserter",
-        "color": "#006194",
+        "color": "#19709e",
         "occupied_space": "1x1"
       },
       {
         "name": "stone-furnace",
-        "color": "#006194",
+        "color": "#19709e",
         "occupied_space": "1x1"
       },
       {
         "name": "inserter",
-        "color": "#006194",
+        "color": "#19709e",
         "occupied_space": "1x1"
       },
       {
         "name": "substation",
-        "color": "#006194",
+        "color": "#19709e",
         "occupied_space": "2x2"
       },
       {
         "name": "pipe-to-ground",
-        "color": "#196594",
+        "color": "#30749e",
         "occupied_space": "1x1"
       },
       {
         "name": "heat-pipe",
-        "color": "#3a81ad",
+        "color": "#4d8db5",
         "occupied_space": "1x1"
       },
       {
         "name": "pipe",
-        "color": "#3a81ad",
+        "color": "#4d8db5",
         "occupied_space": "1x1"
       },
       {
         "name": "pump",
-        "color": "#6b9ab5",
+        "color": "#7aa4bc",
         "occupied_space": "1x2"
       },
       {
         "name": "stone-wall",
-        "color": "#cedbce",
+        "color": "#d3dfd3",
         "occupied_space": "1x1"
       },
       {
         "name": "straight-rail",
-        "color": "#8c8e8c",
+        "color": "#979997",
         "occupied_space": "2x2"
       },
       {
         "name": "accumulator",
-        "color": "#7b797b",
+        "color": "#888688",
         "occupied_space": "2x2"
       },
       {
         "name": "gate",
-        "color": "#7b7d7b",
+        "color": "#888688",
         "occupied_space": "1x1"
       },
       {
         "name": "underground-belt",
-        "color": "#735900",
+        "color": "#81691d",
         "occupied_space": "1x1"
       },
       {
         "name": "gun-turret",
-        "color": "#cea619",
+        "color": "#d3ab55",
         "occupied_space": "2x2"
       },
       {
         "name": "transport-belt",
-        "color": "#cea619",
+        "color": "#d3ab55",
         "occupied_space": "1x1"
       },
       {
         "name": "splitter",
-        "color": "#ffd200",
+        "color": "#ffd619",
         "occupied_space": "2x1"
       },
       {
         "name": "laser-turret",
-        "color": "#de2d29",
+        "color": "#e1423e",
         "occupied_space": "2x2"
       }
     ],
     "u-tiles": [
       {
         "name": "refined-concrete",
-        "color": "#28152a"
+        "color": "#45453e"
       },
       {
         "name": "concrete",
-        "color": "#3a3d3a"
+        "color": "#4d504d"
       },
       {
         "name": "stone-path",
-        "color": "#52514a"
+        "color": "#63625c"
       },
       {
         "name": "refined-hazard-concrete-left",
@@ -116,7 +116,7 @@
       },
       {
         "name": "hazard-concrete-left",
-        "color": "#b58e21"
+        "color": "#bc9937"
       }
     ]
   }
