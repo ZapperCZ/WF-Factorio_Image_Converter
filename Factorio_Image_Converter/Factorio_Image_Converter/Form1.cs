@@ -193,12 +193,12 @@ namespace Factorio_Image_Converter
                                     pos3.y = y + 1.5;
                                     pos4.x = x + 1.5;
                                     pos4.y = y + 1.5;
-                                    /*
-                                    if (block.hasDirection)
+
+                                    if (block.has_Direction)
                                     {
                                         
                                     }
-                                    */
+
                                 }
                                 else if (sizeX == 2 && sizeY == 1)
                                 {
