@@ -148,7 +148,7 @@ namespace Factorio_Image_Converter
             {
                 for (int x = 0; x < bitmap.Width; x++)
                 {
-                    Debug.WriteLine("x > "+x+" y > "+y);
+                    //Debug.WriteLine("x > "+x+" y > "+y);
                     Color pixelColor = bitmap.GetPixel(x, y);
                     string pixelColorHex = ColorTranslator.ToHtml(pixelColor).ToLower();
                     if (pixelColorHex != "#000000") //transparent
@@ -156,7 +156,7 @@ namespace Factorio_Image_Converter
                         totalPixels++;
                         foreach (UBlock block in AvailableBlocks)
                         {
-                            Debug.WriteLine("pixel > " + pixelColorHex + " block > " + block.color);
+                            //Debug.WriteLine("pixel > " + pixelColorHex + " block > " + block.color);
                             if (pixelColorHex == block.color)
                             {
                                 found++;
@@ -165,7 +165,7 @@ namespace Factorio_Image_Converter
                                 //Entities are listed through in pairs of 4, so top left, top right, bottom left, bottom right
                                 int sizeX = Convert.ToInt32(block.occupied_space[0]);
                                 int sizeY = Convert.ToInt32(block.occupied_space[2]);
-                                if (sizeX == 1 && sizeY == 1)
+                                if (sizeX == 1 && sizeY == 1)   //Doesn't trigger, find out why
                                 {
                                     Entity entity1 = new Entity();
                                     Entity entity2 = new Entity();
@@ -175,15 +175,21 @@ namespace Factorio_Image_Converter
                                     Position pos2 = new Position();
                                     Position pos3 = new Position();
                                     Position pos4 = new Position();
-                                    //Debug.WriteLine(index);
+                                    Debug.WriteLine("index before > " + index);
                                     entity1.entity_number = index++;
                                     entity2.entity_number = index++;
                                     entity3.entity_number = index++;
                                     entity4.entity_number = index++;
-                                    //Debug.WriteLine(index);
+                                    Debug.WriteLine("index after > " + index);
                                     entity1.name = block.name;
                                     pos1.x = x + 0.5;
                                     pos1.y = y + 0.5;
+                                    pos2.x = x + 1.5;
+                                    pos2.y = y + 0.5;
+                                    pos3.x = x + 0.5;
+                                    pos3.y = y + 1.5;
+                                    pos4.x = x + 1.5;
+                                    pos4.y = y + 1.5;
                                 }
                                 else if (sizeX == 2 && sizeY == 1)
                                 {
@@ -206,6 +212,36 @@ namespace Factorio_Image_Converter
                                 break;
                             }
                         }
+                        //only iterate through if we haven't found a block, otherwise it just slows the app down
+                        foreach(UTile tile in AvailableTiles)
+                        {
+                            Debug.WriteLine("pixel > " + pixelColorHex + " tile > " + tile.color);
+                            if (pixelColorHex == tile.color)
+                            {
+                                found++;
+                                break;
+                                Entity entity1 = new Entity();
+                                Entity entity2 = new Entity();
+                                Entity entity3 = new Entity();
+                                Entity entity4 = new Entity();
+                                Position pos1 = new Position();
+                                Position pos2 = new Position();
+                                Position pos3 = new Position();
+                                Position pos4 = new Position();
+                                entity1.name = tile.name;
+                                entity2.name = tile.name;
+                                entity3.name = tile.name;
+                                entity4.name = tile.name;
+                                pos1.x = x + 1;
+                                pos1.y = y + 1;
+                                pos2.x = x + 2;
+                                pos2.y = y + 1;
+                                pos3.x = x + 1;
+                                pos3.y = y + 2;
+                                pos4.x = x + 2;
+                                pos4.y = y + 2;
+                            }
+                        }
                     }
                 }
             }
@@ -214,10 +250,6 @@ namespace Factorio_Image_Converter
         private void ConvertJSONToBlueprint()
         {
             //compress the JSON file using zlib deflate compression level 9, then convert to base64 and put 0 at the start
-        }
-        private void ConvertBlocksToString(List<UBlock> BlockList)
-        {
-            //TODO: Find out how to do this (maybe reverse engineer Miditorio?)
         }
         private void LoadAvailableBlocks()
         {

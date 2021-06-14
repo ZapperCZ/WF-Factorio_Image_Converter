@@ -98,9 +98,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Icons\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Images\converted_snan.png" />
+    <Folder Include="Images\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
