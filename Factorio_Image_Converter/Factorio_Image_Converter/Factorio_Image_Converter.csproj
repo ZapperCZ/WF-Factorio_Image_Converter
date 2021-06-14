@@ -98,7 +98,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Icons\" />
-    <Folder Include="Images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\Palette-black.png" />
+    <Content Include="Images\Palette.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
