@@ -168,6 +168,8 @@ namespace Factorio_Image_Converter
                                 int sizeY = Convert.ToInt32(block.occupied_space[2].ToString());
                                 //Debug.WriteLine("orig > " + block.occupied_space + " x > " + sizeX + " y > " + sizeY);
 
+                                //List<Entity> entityList = new List<Entity>()
+                                //TODO: Optimize this code below
                                 if (sizeX == 1 && sizeY == 1)   //Doesn't trigger, find out why
                                 {
                                     Entity entity1 = new Entity();
@@ -194,7 +196,7 @@ namespace Factorio_Image_Converter
                                     pos4.x = x + 1.5;
                                     pos4.y = y + 1.5;
 
-                                    if (block.has_Direction)
+                                    if (block.has_direction)
                                     {
                                         
                                     }
