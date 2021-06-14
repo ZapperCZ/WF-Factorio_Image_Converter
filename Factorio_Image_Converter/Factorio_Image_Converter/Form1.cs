@@ -160,11 +160,14 @@ namespace Factorio_Image_Converter
                             if (pixelColorHex == block.color)
                             {
                                 found++;
+                                Debug.WriteLine("block");
                                 //All positions must be 0.5 because of rails, rails are 0.0
                                 //Coordinates are based on mathematics, not IT
                                 //Entities are listed through in pairs of 4, so top left, top right, bottom left, bottom right
-                                int sizeX = Convert.ToInt32(block.occupied_space[0]);
-                                int sizeY = Convert.ToInt32(block.occupied_space[2]);
+                                int sizeX = Convert.ToInt32(block.occupied_space[0].ToString());
+                                int sizeY = Convert.ToInt32(block.occupied_space[2].ToString());
+                                //Debug.WriteLine("orig > " + block.occupied_space + " x > " + sizeX + " y > " + sizeY);
+
                                 if (sizeX == 1 && sizeY == 1)   //Doesn't trigger, find out why
                                 {
                                     Entity entity1 = new Entity();
@@ -190,6 +193,12 @@ namespace Factorio_Image_Converter
                                     pos3.y = y + 1.5;
                                     pos4.x = x + 1.5;
                                     pos4.y = y + 1.5;
+                                    /*
+                                    if (block.hasDirection)
+                                    {
+                                        
+                                    }
+                                    */
                                 }
                                 else if (sizeX == 2 && sizeY == 1)
                                 {
@@ -215,9 +224,10 @@ namespace Factorio_Image_Converter
                         //only iterate through if we haven't found a block, otherwise it just slows the app down
                         foreach(UTile tile in AvailableTiles)
                         {
-                            Debug.WriteLine("pixel > " + pixelColorHex + " tile > " + tile.color);
+                            //Debug.WriteLine("pixel > " + pixelColorHex + " tile > " + tile.color);
                             if (pixelColorHex == tile.color)
                             {
+                                Debug.WriteLine("tile");
                                 found++;
                                 break;
                                 Entity entity1 = new Entity();
