@@ -436,6 +436,13 @@ namespace Factorio_Image_Converter
         private void btn_Export_Click(object sender, EventArgs e)
         {
             ConvertImageToBlocks(ResultImage);       //This will convert only available colors in the image to blocks, so for now input can be only made from those colors
+            //File.WriteAllText(@"..\..\Blueprint.json", JsonConvert.SerializeObject(FactorioBlueprint));
+            using (StreamWriter sw = File.CreateText(@"..\..\Blueprint.json"))
+            {
+                JsonSerializer jsonSerializer = new JsonSerializer();
+                jsonSerializer.Serialize(sw,FactorioBlueprint);
+            }
+            Debug.WriteLine("exported JSON to \"..\\..\\Blueprint.json\"");
         }
     }
 }
