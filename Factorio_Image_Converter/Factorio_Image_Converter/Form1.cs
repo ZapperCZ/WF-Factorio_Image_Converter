@@ -139,6 +139,7 @@ namespace Factorio_Image_Converter
         }
         private void ConvertImageToBlocks(Image inputImage) //1px = 4 blocks
         {
+            InstantiateRoot();
             //TODO: Convert pixels of image to blocks
             int index = 1;
             int found = 0;
@@ -168,7 +169,7 @@ namespace Factorio_Image_Converter
                                 int sizeY = Convert.ToInt32(block.occupied_space[2].ToString());
                                 //Debug.WriteLine("orig > " + block.occupied_space + " x > " + sizeX + " y > " + sizeY);
 
-                                //List<Entity> entityList = new List<Entity>()
+                                List<Entity> entityList = new List<Entity>();
                                 //TODO: Optimize this code below
                                 if (sizeX == 1 && sizeY == 1)   //Doesn't trigger, find out why
                                 {
@@ -180,13 +181,18 @@ namespace Factorio_Image_Converter
                                     Position pos2 = new Position();
                                     Position pos3 = new Position();
                                     Position pos4 = new Position();
-                                    Debug.WriteLine("index before > " + index);
+                                    /*
+                                    //Debug.WriteLine("index before > " + index);
                                     entity1.entity_number = index++;
                                     entity2.entity_number = index++;
                                     entity3.entity_number = index++;
                                     entity4.entity_number = index++;
-                                    Debug.WriteLine("index after > " + index);
+                                    //Debug.WriteLine("index after > " + index);
                                     entity1.name = block.name;
+                                    entity2.name = block.name;
+                                    entity3.name = block.name;
+                                    entity4.name = block.name;
+                                    */
                                     pos1.x = x + 0.5;
                                     pos1.y = y + 0.5;
                                     pos2.x = x + 1.5;
@@ -196,28 +202,53 @@ namespace Factorio_Image_Converter
                                     pos4.x = x + 1.5;
                                     pos4.y = y + 1.5;
 
+                                    /*
                                     if (block.has_direction)
                                     {
-                                        
+                                        entity1.direction = 4;
+                                        entity2.direction = 4;
+                                        entity3.direction = 4;
+                                        entity4.direction = 4;
                                     }
-
+                                    FactorioBlueprint.blueprint.entities.Add(entity1);
+                                    FactorioBlueprint.blueprint.entities.Add(entity2);
+                                    FactorioBlueprint.blueprint.entities.Add(entity3);
+                                    FactorioBlueprint.blueprint.entities.Add(entity4);
+                                    */
                                 }
                                 else if (sizeX == 2 && sizeY == 1)
                                 {
-
+                                    Entity entity1 = new Entity();
+                                    Entity entity2 = new Entity();
+                                    Position pos1 = new Position();
+                                    Position pos2 = new Position();
                                 }
                                 else if (sizeX == 1 && sizeY == 2)
                                 {
-
+                                    Entity entity1 = new Entity();
+                                    Entity entity2 = new Entity();
+                                    Position pos1 = new Position();
+                                    Position pos2 = new Position();
                                 }
                                 else if (sizeX == 2 && sizeY == 2)
                                 {
                                     Entity entity1 = new Entity();
                                     Position pos = new Position();
-                                    entity1.entity_number = index;
-                                    entity1.name = block.name;
+                                    //entity1.entity_number = index;
+                                    //entity1.name = block.name;
                                     pos.x = x + 1;
                                     pos.y = y + 1;
+                                    entityList.Add(entity1);
+                                }
+                                foreach(Entity entity in entityList)
+                                {
+                                    entity.entity_number = index++;
+                                    entity.name = block.name;
+                                    if (block.has_direction)
+                                    {
+                                        entity.direction = 4;
+                                    }
+                                    FactorioBlueprint.blueprint.entities.Add(entity);
                                 }
                                 index++;
                                 break;
@@ -232,18 +263,18 @@ namespace Factorio_Image_Converter
                                 Debug.WriteLine("tile");
                                 found++;
                                 break;
-                                Entity entity1 = new Entity();
-                                Entity entity2 = new Entity();
-                                Entity entity3 = new Entity();
-                                Entity entity4 = new Entity();
+                                Tile tile1 = new Tile();
+                                Tile tile2 = new Tile();
+                                Tile tile3 = new Tile();
+                                Tile tile4 = new Tile();
                                 Position pos1 = new Position();
                                 Position pos2 = new Position();
                                 Position pos3 = new Position();
                                 Position pos4 = new Position();
-                                entity1.name = tile.name;
-                                entity2.name = tile.name;
-                                entity3.name = tile.name;
-                                entity4.name = tile.name;
+                                tile1.name = tile.name;
+                                tile2.name = tile.name;
+                                tile3.name = tile.name;
+                                tile4.name = tile.name;
                                 pos1.x = x + 1;
                                 pos1.y = y + 1;
                                 pos2.x = x + 2;
@@ -252,12 +283,34 @@ namespace Factorio_Image_Converter
                                 pos3.y = y + 2;
                                 pos4.x = x + 2;
                                 pos4.y = y + 2;
+                                FactorioBlueprint.blueprint.tiles.Add(tile1);
+                                FactorioBlueprint.blueprint.tiles.Add(tile2);
+                                FactorioBlueprint.blueprint.tiles.Add(tile3);
+                                FactorioBlueprint.blueprint.tiles.Add(tile4);
                             }
                         }
                     }
                 }
             }
             Debug.WriteLine("total normal pixels > " + totalPixels + " pixels recognized > "+ found);
+        }
+        private void InstantiateRoot()
+        {
+            FactorioBlueprint = new Root();
+            FactorioBlueprint.blueprint = new Blueprint();
+            FactorioBlueprint.blueprint.description = "The result image made by Zapper's Factorio Image Converter";
+            FactorioBlueprint.blueprint.icons = new List<Icon>();
+            FactorioBlueprint.blueprint.entities = new List<Entity>();
+            FactorioBlueprint.blueprint.tiles = new List<Tile>();
+            FactorioBlueprint.blueprint.item = "blueprint";
+            FactorioBlueprint.blueprint.label = "Image";
+            FactorioBlueprint.blueprint.version = 281479273906176;     //Factorio map version number, not sure how to get it so I harcoded the current version
+            Icon defaultIcon = new Icon();
+            defaultIcon.signal = new Signal();
+            defaultIcon.signal.type = "item";
+            defaultIcon.signal.name = "wooden-chest";
+            defaultIcon.index = 1;
+            FactorioBlueprint.blueprint.icons.Add(defaultIcon);
         }
         private void ConvertJSONToBlueprint()
         {
