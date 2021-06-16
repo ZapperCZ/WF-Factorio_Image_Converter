@@ -92,15 +92,15 @@
         "has_direction": false
       },
       {
-        "name": "gun-turret",
-        "color": "#d3ab55",
-        "occupied_space": "2x2",
-        "has_direction": false
-      },
-      {
         "name": "transport-belt",
         "color": "#d3ab55",
         "occupied_space": "1x1",
+        "has_direction": false
+      },
+      {
+        "name": "gun-turret",
+        "color": "#d3ab55",
+        "occupied_space": "2x2",
         "has_direction": false
       },
       {

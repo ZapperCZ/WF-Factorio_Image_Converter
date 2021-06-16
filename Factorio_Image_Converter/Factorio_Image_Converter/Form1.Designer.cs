@@ -107,6 +107,7 @@ namespace Factorio_Image_Converter
             this.cb_size.Size = new System.Drawing.Size(126, 28);
             this.cb_size.TabIndex = 3;
             this.cb_size.Text = "Brush Size";
+            this.cb_size.Click += new System.EventHandler(this.FeatureNotImplemented);
             // 
             // Group_Tools
             // 
@@ -129,6 +130,7 @@ namespace Factorio_Image_Converter
             this.btn_color.TabIndex = 6;
             this.btn_color.Text = "Color";
             this.btn_color.UseVisualStyleBackColor = true;
+            this.btn_color.Click += new System.EventHandler(this.FeatureNotImplemented);
             // 
             // btn_palette
             // 
@@ -138,6 +140,7 @@ namespace Factorio_Image_Converter
             this.btn_palette.TabIndex = 5;
             this.btn_palette.Text = "Palette";
             this.btn_palette.UseVisualStyleBackColor = true;
+            this.btn_palette.Click += new System.EventHandler(this.FeatureNotImplemented);
             // 
             // Group_Resolution
             // 
@@ -166,6 +169,7 @@ namespace Factorio_Image_Converter
             this.chk_LockRatio.Text = "Lock Ratio";
             this.chk_LockRatio.UseVisualStyleBackColor = true;
             this.chk_LockRatio.CheckedChanged += new System.EventHandler(this.chk_LockRatio_CheckedChanged);
+            this.chk_LockRatio.Click += new System.EventHandler(this.FeatureNotImplemented);
             // 
             // tb_ImageWidth
             // 
@@ -173,6 +177,7 @@ namespace Factorio_Image_Converter
             this.tb_ImageWidth.Name = "tb_ImageWidth";
             this.tb_ImageWidth.Size = new System.Drawing.Size(104, 26);
             this.tb_ImageWidth.TabIndex = 2;
+            this.tb_ImageWidth.Click += new System.EventHandler(this.FeatureNotImplemented);
             // 
             // tb_ImageHeight
             // 
@@ -180,6 +185,7 @@ namespace Factorio_Image_Converter
             this.tb_ImageHeight.Name = "tb_ImageHeight";
             this.tb_ImageHeight.Size = new System.Drawing.Size(104, 26);
             this.tb_ImageHeight.TabIndex = 11;
+            this.tb_ImageHeight.Click += new System.EventHandler(this.FeatureNotImplemented);
             // 
             // label1
             // 
@@ -226,6 +232,7 @@ namespace Factorio_Image_Converter
             this.cb_Pixel.TabIndex = 9;
             this.cb_Pixel.Text = "Compression Rate";
             this.cb_Pixel.SelectedIndexChanged += new System.EventHandler(this.cb_Pixel_SelectedIndexChanged);
+            this.cb_Pixel.Click += new System.EventHandler(this.FeatureNotImplemented);
             // 
             // btn_AutoResolution
             // 
@@ -235,6 +242,7 @@ namespace Factorio_Image_Converter
             this.btn_AutoResolution.TabIndex = 8;
             this.btn_AutoResolution.Text = "Resolution";
             this.btn_AutoResolution.UseVisualStyleBackColor = true;
+            this.btn_AutoResolution.Click += new System.EventHandler(this.FeatureNotImplemented);
             // 
             // btn_AutoPalette
             // 
@@ -244,6 +252,7 @@ namespace Factorio_Image_Converter
             this.btn_AutoPalette.TabIndex = 7;
             this.btn_AutoPalette.Text = "Palette";
             this.btn_AutoPalette.UseVisualStyleBackColor = true;
+            this.btn_AutoPalette.Click += new System.EventHandler(this.FeatureNotImplemented);
             // 
             // btn_Import
             // 
@@ -275,6 +284,7 @@ namespace Factorio_Image_Converter
             this.btn_About.Size = new System.Drawing.Size(28, 26);
             this.btn_About.TabIndex = 9;
             this.btn_About.UseVisualStyleBackColor = true;
+            this.btn_About.Click += new System.EventHandler(this.FeatureNotImplemented);
             // 
             // Form1
             // 

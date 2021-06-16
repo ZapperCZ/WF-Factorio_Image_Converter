@@ -33,6 +33,7 @@ namespace Factorio_Image_Converter
         List<UTile> AvailableTiles;
         List<Color> AvailableColors;
         List<Color> ImageColors;
+        //Dictionary that ties image colors with factorio blocks
         Root FactorioBlueprint;
 
         public Form1()
@@ -451,6 +452,10 @@ namespace Factorio_Image_Converter
                 jsonSerializer.Serialize(sw,FactorioBlueprint);
             }
             Debug.WriteLine("exported JSON to \"..\\..\\Blueprint.json\"");
+        }
+        private void FeatureNotImplemented(object sender, EventArgs e)
+        {
+            MessageBox.Show("I'm sorry but this feature is not yet implemented");
         }
     }
 }

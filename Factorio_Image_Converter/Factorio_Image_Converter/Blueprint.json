@@ -1,1 +1,2349 @@
-{"blueprint":{"description":"The result image made by Zapper's Factorio Image Converter","icons":[{"signal":{"type":"item","name":"wooden-chest"},"index":1}],"entities":[{"entity_number":1,"name":"wooden-chest","position":{"x":0.5,"y":0.5}},{"entity_number":2,"name":"wooden-chest","position":{"x":1.5,"y":0.5}},{"entity_number":3,"name":"wooden-chest","position":{"x":0.5,"y":1.5}},{"entity_number":4,"name":"wooden-chest","position":{"x":1.5,"y":1.5}},{"entity_number":5,"name":"wooden-chest","position":{"x":1.5,"y":0.5}},{"entity_number":6,"name":"wooden-chest","position":{"x":2.5,"y":0.5}},{"entity_number":7,"name":"wooden-chest","position":{"x":1.5,"y":1.5}},{"entity_number":8,"name":"wooden-chest","position":{"x":2.5,"y":1.5}},{"entity_number":9,"name":"wooden-chest","position":{"x":3.5,"y":0.5}},{"entity_number":10,"name":"wooden-chest","position":{"x":4.5,"y":0.5}},{"entity_number":11,"name":"wooden-chest","position":{"x":3.5,"y":1.5}},{"entity_number":12,"name":"wooden-chest","position":{"x":4.5,"y":1.5}},{"entity_number":13,"name":"wooden-chest","position":{"x":4.5,"y":0.5}},{"entity_number":14,"name":"wooden-chest","position":{"x":5.5,"y":0.5}},{"entity_number":15,"name":"wooden-chest","position":{"x":4.5,"y":1.5}},{"entity_number":16,"name":"wooden-chest","position":{"x":5.5,"y":1.5}},{"entity_number":17,"name":"gun-turret","position":{"x":7.0,"y":1.0}},{"entity_number":18,"name":"gun-turret","position":{"x":8.0,"y":1.0}},{"entity_number":19,"name":"underground-belt","position":{"x":9.5,"y":0.5},"type":"input"},{"entity_number":20,"name":"underground-belt","position":{"x":10.5,"y":0.5},"type":"input"},{"entity_number":21,"name":"underground-belt","position":{"x":9.5,"y":1.5},"type":"input"},{"entity_number":22,"name":"underground-belt","position":{"x":10.5,"y":1.5},"type":"input"},{"entity_number":23,"name":"underground-belt","position":{"x":10.5,"y":0.5},"type":"input"},{"entity_number":24,"name":"underground-belt","position":{"x":11.5,"y":0.5},"type":"input"},{"entity_number":25,"name":"underground-belt","position":{"x":10.5,"y":1.5},"type":"input"},{"entity_number":26,"name":"underground-belt","position":{"x":11.5,"y":1.5},"type":"input"},{"entity_number":27,"name":"splitter","position":{"x":0.0,"y":0.0}},{"entity_number":28,"name":"splitter","position":{"x":0.0,"y":0.0}},{"entity_number":29,"name":"splitter","position":{"x":0.0,"y":0.0}},{"entity_number":30,"name":"splitter","position":{"x":0.0,"y":0.0}},{"entity_number":31,"name":"wooden-chest","position":{"x":15.5,"y":0.5}},{"entity_number":32,"name":"wooden-chest","position":{"x":16.5,"y":0.5}},{"entity_number":33,"name":"wooden-chest","position":{"x":15.5,"y":1.5}},{"entity_number":34,"name":"wooden-chest","position":{"x":16.5,"y":1.5}},{"entity_number":35,"name":"wooden-chest","position":{"x":16.5,"y":0.5}},{"entity_number":36,"name":"wooden-chest","position":{"x":17.5,"y":0.5}},{"entity_number":37,"name":"wooden-chest","position":{"x":16.5,"y":1.5}},{"entity_number":38,"name":"wooden-chest","position":{"x":17.5,"y":1.5}},{"entity_number":39,"name":"wooden-chest","position":{"x":0.5,"y":1.5}},{"entity_number":40,"name":"wooden-chest","position":{"x":1.5,"y":1.5}},{"entity_number":41,"name":"wooden-chest","position":{"x":0.5,"y":2.5}},{"entity_number":42,"name":"wooden-chest","position":{"x":1.5,"y":2.5}},{"entity_number":43,"name":"wooden-chest","position":{"x":1.5,"y":1.5}},{"entity_number":44,"name":"wooden-chest","position":{"x":2.5,"y":1.5}},{"entity_number":45,"name":"wooden-chest","position":{"x":1.5,"y":2.5}},{"entity_number":46,"name":"wooden-chest","position":{"x":2.5,"y":2.5}},{"entity_number":47,"name":"wooden-chest","position":{"x":3.5,"y":1.5}},{"entity_number":48,"name":"wooden-chest","position":{"x":4.5,"y":1.5}},{"entity_number":49,"name":"wooden-chest","position":{"x":3.5,"y":2.5}},{"entity_number":50,"name":"wooden-chest","position":{"x":4.5,"y":2.5}},{"entity_number":51,"name":"wooden-chest","position":{"x":4.5,"y":1.5}},{"entity_number":52,"name":"wooden-chest","position":{"x":5.5,"y":1.5}},{"entity_number":53,"name":"wooden-chest","position":{"x":4.5,"y":2.5}},{"entity_number":54,"name":"wooden-chest","position":{"x":5.5,"y":2.5}},{"entity_number":55,"name":"gun-turret","position":{"x":7.0,"y":2.0}},{"entity_number":56,"name":"gun-turret","position":{"x":8.0,"y":2.0}},{"entity_number":57,"name":"underground-belt","position":{"x":9.5,"y":1.5},"type":"input"},{"entity_number":58,"name":"underground-belt","position":{"x":10.5,"y":1.5},"type":"input"},{"entity_number":59,"name":"underground-belt","position":{"x":9.5,"y":2.5},"type":"input"},{"entity_number":60,"name":"underground-belt","position":{"x":10.5,"y":2.5},"type":"input"},{"entity_number":61,"name":"underground-belt","position":{"x":10.5,"y":1.5},"type":"input"},{"entity_number":62,"name":"underground-belt","position":{"x":11.5,"y":1.5},"type":"input"},{"entity_number":63,"name":"underground-belt","position":{"x":10.5,"y":2.5},"type":"input"},{"entity_number":64,"name":"underground-belt","position":{"x":11.5,"y":2.5},"type":"input"},{"entity_number":65,"name":"splitter","position":{"x":0.0,"y":0.0}},{"entity_number":66,"name":"splitter","position":{"x":0.0,"y":0.0}},{"entity_number":67,"name":"splitter","position":{"x":0.0,"y":0.0}},{"entity_number":68,"name":"splitter","position":{"x":0.0,"y":0.0}},{"entity_number":69,"name":"wooden-chest","position":{"x":15.5,"y":1.5}},{"entity_number":70,"name":"wooden-chest","position":{"x":16.5,"y":1.5}},{"entity_number":71,"name":"wooden-chest","position":{"x":15.5,"y":2.5}},{"entity_number":72,"name":"wooden-chest","position":{"x":16.5,"y":2.5}},{"entity_number":73,"name":"wooden-chest","position":{"x":16.5,"y":1.5}},{"entity_number":74,"name":"wooden-chest","position":{"x":17.5,"y":1.5}},{"entity_number":75,"name":"wooden-chest","position":{"x":16.5,"y":2.5}},{"entity_number":76,"name":"wooden-chest","position":{"x":17.5,"y":2.5}},{"entity_number":77,"name":"accumulator","position":{"x":1.0,"y":4.0}},{"entity_number":78,"name":"accumulator","position":{"x":2.0,"y":4.0}},{"entity_number":79,"name":"heat-pipe","position":{"x":3.5,"y":3.5}},{"entity_number":80,"name":"heat-pipe","position":{"x":4.5,"y":3.5}},{"entity_number":81,"name":"heat-pipe","position":{"x":3.5,"y":4.5}},{"entity_number":82,"name":"heat-pipe","position":{"x":4.5,"y":4.5}},{"entity_number":83,"name":"heat-pipe","position":{"x":4.5,"y":3.5}},{"entity_number":84,"name":"heat-pipe","position":{"x":5.5,"y":3.5}},{"entity_number":85,"name":"heat-pipe","position":{"x":4.5,"y":4.5}},{"entity_number":86,"name":"heat-pipe","position":{"x":5.5,"y":4.5}},{"entity_number":87,"name":"wooden-chest","position":{"x":6.5,"y":3.5}},{"entity_number":88,"name":"wooden-chest","position":{"x":7.5,"y":3.5}},{"entity_number":89,"name":"wooden-chest","position":{"x":6.5,"y":4.5}},{"entity_number":90,"name":"wooden-chest","position":{"x":7.5,"y":4.5}},{"entity_number":91,"name":"wooden-chest","position":{"x":7.5,"y":3.5}},{"entity_number":92,"name":"wooden-chest","position":{"x":8.5,"y":3.5}},{"entity_number":93,"name":"wooden-chest","position":{"x":7.5,"y":4.5}},{"entity_number":94,"name":"wooden-chest","position":{"x":8.5,"y":4.5}},{"entity_number":95,"name":"stone-wall","position":{"x":9.5,"y":3.5}},{"entity_number":96,"name":"stone-wall","position":{"x":10.5,"y":3.5}},{"entity_number":97,"name":"stone-wall","position":{"x":9.5,"y":4.5}},{"entity_number":98,"name":"stone-wall","position":{"x":10.5,"y":4.5}},{"entity_number":99,"name":"stone-wall","position":{"x":10.5,"y":3.5}},{"entity_number":100,"name":"stone-wall","position":{"x":11.5,"y":3.5}},{"entity_number":101,"name":"stone-wall","position":{"x":10.5,"y":4.5}},{"entity_number":102,"name":"stone-wall","position":{"x":11.5,"y":4.5}},{"entity_number":103,"name":"accumulator","position":{"x":13.0,"y":4.0}},{"entity_number":104,"name":"accumulator","position":{"x":14.0,"y":4.0}},{"entity_number":105,"name":"gun-turret","position":{"x":16.0,"y":4.0}},{"entity_number":106,"name":"gun-turret","position":{"x":17.0,"y":4.0}},{"entity_number":107,"name":"accumulator","position":{"x":1.0,"y":5.0}},{"entity_number":108,"name":"accumulator","position":{"x":2.0,"y":5.0}},{"entity_number":109,"name":"heat-pipe","position":{"x":3.5,"y":4.5}},{"entity_number":110,"name":"heat-pipe","position":{"x":4.5,"y":4.5}},{"entity_number":111,"name":"heat-pipe","position":{"x":3.5,"y":5.5}},{"entity_number":112,"name":"heat-pipe","position":{"x":4.5,"y":5.5}},{"entity_number":113,"name":"heat-pipe","position":{"x":4.5,"y":4.5}},{"entity_number":114,"name":"heat-pipe","position":{"x":5.5,"y":4.5}},{"entity_number":115,"name":"heat-pipe","position":{"x":4.5,"y":5.5}},{"entity_number":116,"name":"heat-pipe","position":{"x":5.5,"y":5.5}},{"entity_number":117,"name":"wooden-chest","position":{"x":6.5,"y":4.5}},{"entity_number":118,"name":"wooden-chest","position":{"x":7.5,"y":4.5}},{"entity_number":119,"name":"wooden-chest","position":{"x":6.5,"y":5.5}},{"entity_number":120,"name":"wooden-chest","position":{"x":7.5,"y":5.5}},{"entity_number":121,"name":"wooden-chest","position":{"x":7.5,"y":4.5}},{"entity_number":122,"name":"wooden-chest","position":{"x":8.5,"y":4.5}},{"entity_number":123,"name":"wooden-chest","position":{"x":7.5,"y":5.5}},{"entity_number":124,"name":"wooden-chest","position":{"x":8.5,"y":5.5}},{"entity_number":125,"name":"stone-wall","position":{"x":9.5,"y":4.5}},{"entity_number":126,"name":"stone-wall","position":{"x":10.5,"y":4.5}},{"entity_number":127,"name":"stone-wall","position":{"x":9.5,"y":5.5}},{"entity_number":128,"name":"stone-wall","position":{"x":10.5,"y":5.5}},{"entity_number":129,"name":"stone-wall","position":{"x":10.5,"y":4.5}},{"entity_number":130,"name":"stone-wall","position":{"x":11.5,"y":4.5}},{"entity_number":131,"name":"stone-wall","position":{"x":10.5,"y":5.5}},{"entity_number":132,"name":"stone-wall","position":{"x":11.5,"y":5.5}},{"entity_number":133,"name":"accumulator","position":{"x":13.0,"y":5.0}},{"entity_number":134,"name":"accumulator","position":{"x":14.0,"y":5.0}},{"entity_number":135,"name":"gun-turret","position":{"x":16.0,"y":5.0}},{"entity_number":136,"name":"gun-turret","position":{"x":17.0,"y":5.0}},{"entity_number":137,"name":"wooden-chest","position":{"x":0.5,"y":6.5}},{"entity_number":138,"name":"wooden-chest","position":{"x":1.5,"y":6.5}},{"entity_number":139,"name":"wooden-chest","position":{"x":0.5,"y":7.5}},{"entity_number":140,"name":"wooden-chest","position":{"x":1.5,"y":7.5}},{"entity_number":141,"name":"wooden-chest","position":{"x":1.5,"y":6.5}},{"entity_number":142,"name":"wooden-chest","position":{"x":2.5,"y":6.5}},{"entity_number":143,"name":"wooden-chest","position":{"x":1.5,"y":7.5}},{"entity_number":144,"name":"wooden-chest","position":{"x":2.5,"y":7.5}},{"entity_number":145,"name":"heat-pipe","position":{"x":3.5,"y":6.5}},{"entity_number":146,"name":"heat-pipe","position":{"x":4.5,"y":6.5}},{"entity_number":147,"name":"heat-pipe","position":{"x":3.5,"y":7.5}},{"entity_number":148,"name":"heat-pipe","position":{"x":4.5,"y":7.5}},{"entity_number":149,"name":"heat-pipe","position":{"x":4.5,"y":6.5}},{"entity_number":150,"name":"heat-pipe","position":{"x":5.5,"y":6.5}},{"entity_number":151,"name":"heat-pipe","position":{"x":4.5,"y":7.5}},{"entity_number":152,"name":"heat-pipe","position":{"x":5.5,"y":7.5}},{"entity_number":153,"name":"pipe-to-ground","position":{"x":6.5,"y":6.5},"direction":4},{"entity_number":154,"name":"pipe-to-ground","position":{"x":7.5,"y":6.5},"direction":4},{"entity_number":155,"name":"pipe-to-ground","position":{"x":6.5,"y":7.5},"direction":4},{"entity_number":156,"name":"pipe-to-ground","position":{"x":7.5,"y":7.5},"direction":4},{"entity_number":157,"name":"pipe-to-ground","position":{"x":7.5,"y":6.5},"direction":4},{"entity_number":158,"name":"pipe-to-ground","position":{"x":8.5,"y":6.5},"direction":4},{"entity_number":159,"name":"pipe-to-ground","position":{"x":7.5,"y":7.5},"direction":4},{"entity_number":160,"name":"pipe-to-ground","position":{"x":8.5,"y":7.5},"direction":4},{"entity_number":161,"name":"wooden-chest","position":{"x":9.5,"y":6.5}},{"entity_number":162,"name":"wooden-chest","position":{"x":10.5,"y":6.5}},{"entity_number":163,"name":"wooden-chest","position":{"x":9.5,"y":7.5}},{"entity_number":164,"name":"wooden-chest","position":{"x":10.5,"y":7.5}},{"entity_number":165,"name":"wooden-chest","position":{"x":10.5,"y":6.5}},{"entity_number":166,"name":"wooden-chest","position":{"x":11.5,"y":6.5}},{"entity_number":167,"name":"wooden-chest","position":{"x":10.5,"y":7.5}},{"entity_number":168,"name":"wooden-chest","position":{"x":11.5,"y":7.5}},{"entity_number":169,"name":"pump","position":{"x":0.0,"y":0.0}},{"entity_number":170,"name":"pump","position":{"x":0.0,"y":0.0}},{"entity_number":171,"name":"pump","position":{"x":0.0,"y":0.0}},{"entity_number":172,"name":"pump","position":{"x":0.0,"y":0.0}},{"entity_number":173,"name":"straight-rail","position":{"x":16.0,"y":7.0}},{"entity_number":174,"name":"straight-rail","position":{"x":17.0,"y":7.0}},{"entity_number":175,"name":"wooden-chest","position":{"x":0.5,"y":7.5}},{"entity_number":176,"name":"wooden-chest","position":{"x":1.5,"y":7.5}},{"entity_number":177,"name":"wooden-chest","position":{"x":0.5,"y":8.5}},{"entity_number":178,"name":"wooden-chest","position":{"x":1.5,"y":8.5}},{"entity_number":179,"name":"wooden-chest","position":{"x":1.5,"y":7.5}},{"entity_number":180,"name":"wooden-chest","position":{"x":2.5,"y":7.5}},{"entity_number":181,"name":"wooden-chest","position":{"x":1.5,"y":8.5}},{"entity_number":182,"name":"wooden-chest","position":{"x":2.5,"y":8.5}},{"entity_number":183,"name":"heat-pipe","position":{"x":3.5,"y":7.5}},{"entity_number":184,"name":"heat-pipe","position":{"x":4.5,"y":7.5}},{"entity_number":185,"name":"heat-pipe","position":{"x":3.5,"y":8.5}},{"entity_number":186,"name":"heat-pipe","position":{"x":4.5,"y":8.5}},{"entity_number":187,"name":"heat-pipe","position":{"x":4.5,"y":7.5}},{"entity_number":188,"name":"heat-pipe","position":{"x":5.5,"y":7.5}},{"entity_number":189,"name":"heat-pipe","position":{"x":4.5,"y":8.5}},{"entity_number":190,"name":"heat-pipe","position":{"x":5.5,"y":8.5}},{"entity_number":191,"name":"pipe-to-ground","position":{"x":6.5,"y":7.5},"direction":4},{"entity_number":192,"name":"pipe-to-ground","position":{"x":7.5,"y":7.5},"direction":4},{"entity_number":193,"name":"pipe-to-ground","position":{"x":6.5,"y":8.5},"direction":4},{"entity_number":194,"name":"pipe-to-ground","position":{"x":7.5,"y":8.5},"direction":4},{"entity_number":195,"name":"pipe-to-ground","position":{"x":7.5,"y":7.5},"direction":4},{"entity_number":196,"name":"pipe-to-ground","position":{"x":8.5,"y":7.5},"direction":4},{"entity_number":197,"name":"pipe-to-ground","position":{"x":7.5,"y":8.5},"direction":4},{"entity_number":198,"name":"pipe-to-ground","position":{"x":8.5,"y":8.5},"direction":4},{"entity_number":199,"name":"wooden-chest","position":{"x":9.5,"y":7.5}},{"entity_number":200,"name":"wooden-chest","position":{"x":10.5,"y":7.5}},{"entity_number":201,"name":"wooden-chest","position":{"x":9.5,"y":8.5}},{"entity_number":202,"name":"wooden-chest","position":{"x":10.5,"y":8.5}},{"entity_number":203,"name":"wooden-chest","position":{"x":10.5,"y":7.5}},{"entity_number":204,"name":"wooden-chest","position":{"x":11.5,"y":7.5}},{"entity_number":205,"name":"wooden-chest","position":{"x":10.5,"y":8.5}},{"entity_number":206,"name":"wooden-chest","position":{"x":11.5,"y":8.5}},{"entity_number":207,"name":"pump","position":{"x":0.0,"y":0.0}},{"entity_number":208,"name":"pump","position":{"x":0.0,"y":0.0}},{"entity_number":209,"name":"pump","position":{"x":0.0,"y":0.0}},{"entity_number":210,"name":"pump","position":{"x":0.0,"y":0.0}},{"entity_number":211,"name":"straight-rail","position":{"x":16.0,"y":8.0}},{"entity_number":212,"name":"straight-rail","position":{"x":17.0,"y":8.0}},{"entity_number":213,"name":"laser-turret","position":{"x":1.0,"y":10.0}},{"entity_number":214,"name":"laser-turret","position":{"x":2.0,"y":10.0}},{"entity_number":215,"name":"laser-turret","position":{"x":1.0,"y":11.0}},{"entity_number":216,"name":"laser-turret","position":{"x":2.0,"y":11.0}}],"tiles":[{"position":{"x":4.0,"y":10.0},"name":"stone-path"},{"position":{"x":5.0,"y":10.0},"name":"stone-path"},{"position":{"x":4.0,"y":11.0},"name":"stone-path"},{"position":{"x":5.0,"y":11.0},"name":"stone-path"},{"position":{"x":5.0,"y":10.0},"name":"stone-path"},{"position":{"x":6.0,"y":10.0},"name":"stone-path"},{"position":{"x":5.0,"y":11.0},"name":"stone-path"},{"position":{"x":6.0,"y":11.0},"name":"stone-path"},{"position":{"x":7.0,"y":10.0},"name":"concrete"},{"position":{"x":8.0,"y":10.0},"name":"concrete"},{"position":{"x":7.0,"y":11.0},"name":"concrete"},{"position":{"x":8.0,"y":11.0},"name":"concrete"},{"position":{"x":8.0,"y":10.0},"name":"concrete"},{"position":{"x":9.0,"y":10.0},"name":"concrete"},{"position":{"x":8.0,"y":11.0},"name":"concrete"},{"position":{"x":9.0,"y":11.0},"name":"concrete"},{"position":{"x":10.0,"y":10.0},"name":"hazard-concrete-left"},{"position":{"x":11.0,"y":10.0},"name":"hazard-concrete-left"},{"position":{"x":10.0,"y":11.0},"name":"hazard-concrete-left"},{"position":{"x":11.0,"y":11.0},"name":"hazard-concrete-left"},{"position":{"x":11.0,"y":10.0},"name":"hazard-concrete-left"},{"position":{"x":12.0,"y":10.0},"name":"hazard-concrete-left"},{"position":{"x":11.0,"y":11.0},"name":"hazard-concrete-left"},{"position":{"x":12.0,"y":11.0},"name":"hazard-concrete-left"},{"position":{"x":13.0,"y":10.0},"name":"refined-concrete"},{"position":{"x":14.0,"y":10.0},"name":"refined-concrete"},{"position":{"x":13.0,"y":11.0},"name":"refined-concrete"},{"position":{"x":14.0,"y":11.0},"name":"refined-concrete"},{"position":{"x":14.0,"y":10.0},"name":"refined-concrete"},{"position":{"x":15.0,"y":10.0},"name":"refined-concrete"},{"position":{"x":14.0,"y":11.0},"name":"refined-concrete"},{"position":{"x":15.0,"y":11.0},"name":"refined-concrete"},{"position":{"x":16.0,"y":10.0},"name":"refined-hazard-concrete-left"},{"position":{"x":17.0,"y":10.0},"name":"refined-hazard-concrete-left"},{"position":{"x":16.0,"y":11.0},"name":"refined-hazard-concrete-left"},{"position":{"x":17.0,"y":11.0},"name":"refined-hazard-concrete-left"},{"position":{"x":17.0,"y":10.0},"name":"refined-hazard-concrete-left"},{"position":{"x":18.0,"y":10.0},"name":"refined-hazard-concrete-left"},{"position":{"x":17.0,"y":11.0},"name":"refined-hazard-concrete-left"},{"position":{"x":18.0,"y":11.0},"name":"refined-hazard-concrete-left"},{"position":{"x":4.0,"y":11.0},"name":"stone-path"},{"position":{"x":5.0,"y":11.0},"name":"stone-path"},{"position":{"x":4.0,"y":12.0},"name":"stone-path"},{"position":{"x":5.0,"y":12.0},"name":"stone-path"},{"position":{"x":5.0,"y":11.0},"name":"stone-path"},{"position":{"x":6.0,"y":11.0},"name":"stone-path"},{"position":{"x":5.0,"y":12.0},"name":"stone-path"},{"position":{"x":6.0,"y":12.0},"name":"stone-path"},{"position":{"x":7.0,"y":11.0},"name":"concrete"},{"position":{"x":8.0,"y":11.0},"name":"concrete"},{"position":{"x":7.0,"y":12.0},"name":"concrete"},{"position":{"x":8.0,"y":12.0},"name":"concrete"},{"position":{"x":8.0,"y":11.0},"name":"concrete"},{"position":{"x":9.0,"y":11.0},"name":"concrete"},{"position":{"x":8.0,"y":12.0},"name":"concrete"},{"position":{"x":9.0,"y":12.0},"name":"concrete"},{"position":{"x":10.0,"y":11.0},"name":"hazard-concrete-left"},{"position":{"x":11.0,"y":11.0},"name":"hazard-concrete-left"},{"position":{"x":10.0,"y":12.0},"name":"hazard-concrete-left"},{"position":{"x":11.0,"y":12.0},"name":"hazard-concrete-left"},{"position":{"x":11.0,"y":11.0},"name":"hazard-concrete-left"},{"position":{"x":12.0,"y":11.0},"name":"hazard-concrete-left"},{"position":{"x":11.0,"y":12.0},"name":"hazard-concrete-left"},{"position":{"x":12.0,"y":12.0},"name":"hazard-concrete-left"},{"position":{"x":13.0,"y":11.0},"name":"refined-concrete"},{"position":{"x":14.0,"y":11.0},"name":"refined-concrete"},{"position":{"x":13.0,"y":12.0},"name":"refined-concrete"},{"position":{"x":14.0,"y":12.0},"name":"refined-concrete"},{"position":{"x":14.0,"y":11.0},"name":"refined-concrete"},{"position":{"x":15.0,"y":11.0},"name":"refined-concrete"},{"position":{"x":14.0,"y":12.0},"name":"refined-concrete"},{"position":{"x":15.0,"y":12.0},"name":"refined-concrete"},{"position":{"x":16.0,"y":11.0},"name":"refined-hazard-concrete-left"},{"position":{"x":17.0,"y":11.0},"name":"refined-hazard-concrete-left"},{"position":{"x":16.0,"y":12.0},"name":"refined-hazard-concrete-left"},{"position":{"x":17.0,"y":12.0},"name":"refined-hazard-concrete-left"},{"position":{"x":17.0,"y":11.0},"name":"refined-hazard-concrete-left"},{"position":{"x":18.0,"y":11.0},"name":"refined-hazard-concrete-left"},{"position":{"x":17.0,"y":12.0},"name":"refined-hazard-concrete-left"},{"position":{"x":18.0,"y":12.0},"name":"refined-hazard-concrete-left"}],"item":"blueprint","label":"Image","version":281479273906176}}
+{
+  "blueprint": {
+    "description": "The result image made by Zapper's Factorio Image Converter",
+    "icons": [
+      {
+        "signal": {
+          "type": "item",
+          "name": "wooden-chest"
+        },
+        "index": 1
+      }
+    ],
+    "entities": [
+      {
+        "entity_number": 1,
+        "name": "wooden-chest",
+        "position": {
+          "x": -1.5,
+          "y": -1.5
+        }
+      },
+      {
+        "entity_number": 2,
+        "name": "wooden-chest",
+        "position": {
+          "x": -0.5,
+          "y": -1.5
+        }
+      },
+      {
+        "entity_number": 3,
+        "name": "wooden-chest",
+        "position": {
+          "x": -1.5,
+          "y": -0.5
+        }
+      },
+      {
+        "entity_number": 4,
+        "name": "wooden-chest",
+        "position": {
+          "x": -0.5,
+          "y": -0.5
+        }
+      },
+      {
+        "entity_number": 5,
+        "name": "wooden-chest",
+        "position": {
+          "x": 0.5,
+          "y": -1.5
+        }
+      },
+      {
+        "entity_number": 6,
+        "name": "wooden-chest",
+        "position": {
+          "x": 1.5,
+          "y": -1.5
+        }
+      },
+      {
+        "entity_number": 7,
+        "name": "wooden-chest",
+        "position": {
+          "x": 0.5,
+          "y": -0.5
+        }
+      },
+      {
+        "entity_number": 8,
+        "name": "wooden-chest",
+        "position": {
+          "x": 1.5,
+          "y": -0.5
+        }
+      },
+      {
+        "entity_number": 9,
+        "name": "wooden-chest",
+        "position": {
+          "x": 4.5,
+          "y": -1.5
+        }
+      },
+      {
+        "entity_number": 10,
+        "name": "wooden-chest",
+        "position": {
+          "x": 5.5,
+          "y": -1.5
+        }
+      },
+      {
+        "entity_number": 11,
+        "name": "wooden-chest",
+        "position": {
+          "x": 4.5,
+          "y": -0.5
+        }
+      },
+      {
+        "entity_number": 12,
+        "name": "wooden-chest",
+        "position": {
+          "x": 5.5,
+          "y": -0.5
+        }
+      },
+      {
+        "entity_number": 13,
+        "name": "wooden-chest",
+        "position": {
+          "x": 6.5,
+          "y": -1.5
+        }
+      },
+      {
+        "entity_number": 14,
+        "name": "wooden-chest",
+        "position": {
+          "x": 7.5,
+          "y": -1.5
+        }
+      },
+      {
+        "entity_number": 15,
+        "name": "wooden-chest",
+        "position": {
+          "x": 6.5,
+          "y": -0.5
+        }
+      },
+      {
+        "entity_number": 16,
+        "name": "wooden-chest",
+        "position": {
+          "x": 7.5,
+          "y": -0.5
+        }
+      },
+      {
+        "entity_number": 17,
+        "name": "gun-turret",
+        "position": {
+          "x": 11,
+          "y": -1
+        }
+      },
+      {
+        "entity_number": 18,
+        "name": "gun-turret",
+        "position": {
+          "x": 13,
+          "y": -1
+        }
+      },
+      {
+        "entity_number": 19,
+        "name": "underground-belt",
+        "position": {
+          "x": 16.5,
+          "y": -1.5
+        },
+        "type": "input"
+      },
+      {
+        "entity_number": 20,
+        "name": "underground-belt",
+        "position": {
+          "x": 17.5,
+          "y": -1.5
+        },
+        "type": "input"
+      },
+      {
+        "entity_number": 21,
+        "name": "underground-belt",
+        "position": {
+          "x": 16.5,
+          "y": -0.5
+        },
+        "type": "input"
+      },
+      {
+        "entity_number": 22,
+        "name": "underground-belt",
+        "position": {
+          "x": 17.5,
+          "y": -0.5
+        },
+        "type": "input"
+      },
+      {
+        "entity_number": 23,
+        "name": "underground-belt",
+        "position": {
+          "x": 18.5,
+          "y": -1.5
+        },
+        "type": "input"
+      },
+      {
+        "entity_number": 24,
+        "name": "underground-belt",
+        "position": {
+          "x": 19.5,
+          "y": -1.5
+        },
+        "type": "input"
+      },
+      {
+        "entity_number": 25,
+        "name": "underground-belt",
+        "position": {
+          "x": 18.5,
+          "y": -0.5
+        },
+        "type": "input"
+      },
+      {
+        "entity_number": 26,
+        "name": "underground-belt",
+        "position": {
+          "x": 19.5,
+          "y": -0.5
+        },
+        "type": "input"
+      },
+      {
+        "entity_number": 27,
+        "name": "splitter",
+        "position": {
+          "x": 23,
+          "y": 0
+        }
+      },
+      {
+        "entity_number": 28,
+        "name": "splitter",
+        "position": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      {
+        "entity_number": 29,
+        "name": "splitter",
+        "position": {
+          "x": 25,
+          "y": 0
+        }
+      },
+      {
+        "entity_number": 30,
+        "name": "splitter",
+        "position": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      {
+        "entity_number": 31,
+        "name": "wooden-chest",
+        "position": {
+          "x": 28.5,
+          "y": -1.5
+        }
+      },
+      {
+        "entity_number": 32,
+        "name": "wooden-chest",
+        "position": {
+          "x": 29.5,
+          "y": -1.5
+        }
+      },
+      {
+        "entity_number": 33,
+        "name": "wooden-chest",
+        "position": {
+          "x": 28.5,
+          "y": -0.5
+        }
+      },
+      {
+        "entity_number": 34,
+        "name": "wooden-chest",
+        "position": {
+          "x": 29.5,
+          "y": -0.5
+        }
+      },
+      {
+        "entity_number": 35,
+        "name": "wooden-chest",
+        "position": {
+          "x": 30.5,
+          "y": -1.5
+        }
+      },
+      {
+        "entity_number": 36,
+        "name": "wooden-chest",
+        "position": {
+          "x": 31.5,
+          "y": -1.5
+        }
+      },
+      {
+        "entity_number": 37,
+        "name": "wooden-chest",
+        "position": {
+          "x": 30.5,
+          "y": -0.5
+        }
+      },
+      {
+        "entity_number": 38,
+        "name": "wooden-chest",
+        "position": {
+          "x": 31.5,
+          "y": -0.5
+        }
+      },
+      {
+        "entity_number": 39,
+        "name": "wooden-chest",
+        "position": {
+          "x": -1.5,
+          "y": 0.5
+        }
+      },
+      {
+        "entity_number": 40,
+        "name": "wooden-chest",
+        "position": {
+          "x": -0.5,
+          "y": 0.5
+        }
+      },
+      {
+        "entity_number": 41,
+        "name": "wooden-chest",
+        "position": {
+          "x": -1.5,
+          "y": 1.5
+        }
+      },
+      {
+        "entity_number": 42,
+        "name": "wooden-chest",
+        "position": {
+          "x": -0.5,
+          "y": 1.5
+        }
+      },
+      {
+        "entity_number": 43,
+        "name": "wooden-chest",
+        "position": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      {
+        "entity_number": 44,
+        "name": "wooden-chest",
+        "position": {
+          "x": 1.5,
+          "y": 0.5
+        }
+      },
+      {
+        "entity_number": 45,
+        "name": "wooden-chest",
+        "position": {
+          "x": 0.5,
+          "y": 1.5
+        }
+      },
+      {
+        "entity_number": 46,
+        "name": "wooden-chest",
+        "position": {
+          "x": 1.5,
+          "y": 1.5
+        }
+      },
+      {
+        "entity_number": 47,
+        "name": "wooden-chest",
+        "position": {
+          "x": 4.5,
+          "y": 0.5
+        }
+      },
+      {
+        "entity_number": 48,
+        "name": "wooden-chest",
+        "position": {
+          "x": 5.5,
+          "y": 0.5
+        }
+      },
+      {
+        "entity_number": 49,
+        "name": "wooden-chest",
+        "position": {
+          "x": 4.5,
+          "y": 1.5
+        }
+      },
+      {
+        "entity_number": 50,
+        "name": "wooden-chest",
+        "position": {
+          "x": 5.5,
+          "y": 1.5
+        }
+      },
+      {
+        "entity_number": 51,
+        "name": "wooden-chest",
+        "position": {
+          "x": 6.5,
+          "y": 0.5
+        }
+      },
+      {
+        "entity_number": 52,
+        "name": "wooden-chest",
+        "position": {
+          "x": 7.5,
+          "y": 0.5
+        }
+      },
+      {
+        "entity_number": 53,
+        "name": "wooden-chest",
+        "position": {
+          "x": 6.5,
+          "y": 1.5
+        }
+      },
+      {
+        "entity_number": 54,
+        "name": "wooden-chest",
+        "position": {
+          "x": 7.5,
+          "y": 1.5
+        }
+      },
+      {
+        "entity_number": 55,
+        "name": "gun-turret",
+        "position": {
+          "x": 11,
+          "y": 1
+        }
+      },
+      {
+        "entity_number": 56,
+        "name": "gun-turret",
+        "position": {
+          "x": 13,
+          "y": 1
+        }
+      },
+      {
+        "entity_number": 57,
+        "name": "underground-belt",
+        "position": {
+          "x": 16.5,
+          "y": 0.5
+        },
+        "type": "input"
+      },
+      {
+        "entity_number": 58,
+        "name": "underground-belt",
+        "position": {
+          "x": 17.5,
+          "y": 0.5
+        },
+        "type": "input"
+      },
+      {
+        "entity_number": 59,
+        "name": "underground-belt",
+        "position": {
+          "x": 16.5,
+          "y": 1.5
+        },
+        "type": "input"
+      },
+      {
+        "entity_number": 60,
+        "name": "underground-belt",
+        "position": {
+          "x": 17.5,
+          "y": 1.5
+        },
+        "type": "input"
+      },
+      {
+        "entity_number": 61,
+        "name": "underground-belt",
+        "position": {
+          "x": 18.5,
+          "y": 0.5
+        },
+        "type": "input"
+      },
+      {
+        "entity_number": 62,
+        "name": "underground-belt",
+        "position": {
+          "x": 19.5,
+          "y": 0.5
+        },
+        "type": "input"
+      },
+      {
+        "entity_number": 63,
+        "name": "underground-belt",
+        "position": {
+          "x": 18.5,
+          "y": 1.5
+        },
+        "type": "input"
+      },
+      {
+        "entity_number": 64,
+        "name": "underground-belt",
+        "position": {
+          "x": 19.5,
+          "y": 1.5
+        },
+        "type": "input"
+      },
+      {
+        "entity_number": 65,
+        "name": "splitter",
+        "position": {
+          "x": 23,
+          "y": 0
+        }
+      },
+      {
+        "entity_number": 66,
+        "name": "splitter",
+        "position": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      {
+        "entity_number": 67,
+        "name": "splitter",
+        "position": {
+          "x": 25,
+          "y": 0
+        }
+      },
+      {
+        "entity_number": 68,
+        "name": "splitter",
+        "position": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      {
+        "entity_number": 69,
+        "name": "wooden-chest",
+        "position": {
+          "x": 28.5,
+          "y": 0.5
+        }
+      },
+      {
+        "entity_number": 70,
+        "name": "wooden-chest",
+        "position": {
+          "x": 29.5,
+          "y": 0.5
+        }
+      },
+      {
+        "entity_number": 71,
+        "name": "wooden-chest",
+        "position": {
+          "x": 28.5,
+          "y": 1.5
+        }
+      },
+      {
+        "entity_number": 72,
+        "name": "wooden-chest",
+        "position": {
+          "x": 29.5,
+          "y": 1.5
+        }
+      },
+      {
+        "entity_number": 73,
+        "name": "wooden-chest",
+        "position": {
+          "x": 30.5,
+          "y": 0.5
+        }
+      },
+      {
+        "entity_number": 74,
+        "name": "wooden-chest",
+        "position": {
+          "x": 31.5,
+          "y": 0.5
+        }
+      },
+      {
+        "entity_number": 75,
+        "name": "wooden-chest",
+        "position": {
+          "x": 30.5,
+          "y": 1.5
+        }
+      },
+      {
+        "entity_number": 76,
+        "name": "wooden-chest",
+        "position": {
+          "x": 31.5,
+          "y": 1.5
+        }
+      },
+      {
+        "entity_number": 77,
+        "name": "accumulator",
+        "position": {
+          "x": -1,
+          "y": 5
+        }
+      },
+      {
+        "entity_number": 78,
+        "name": "accumulator",
+        "position": {
+          "x": 1,
+          "y": 5
+        }
+      },
+      {
+        "entity_number": 79,
+        "name": "heat-pipe",
+        "position": {
+          "x": 4.5,
+          "y": 4.5
+        }
+      },
+      {
+        "entity_number": 80,
+        "name": "heat-pipe",
+        "position": {
+          "x": 5.5,
+          "y": 4.5
+        }
+      },
+      {
+        "entity_number": 81,
+        "name": "heat-pipe",
+        "position": {
+          "x": 4.5,
+          "y": 5.5
+        }
+      },
+      {
+        "entity_number": 82,
+        "name": "heat-pipe",
+        "position": {
+          "x": 5.5,
+          "y": 5.5
+        }
+      },
+      {
+        "entity_number": 83,
+        "name": "heat-pipe",
+        "position": {
+          "x": 6.5,
+          "y": 4.5
+        }
+      },
+      {
+        "entity_number": 84,
+        "name": "heat-pipe",
+        "position": {
+          "x": 7.5,
+          "y": 4.5
+        }
+      },
+      {
+        "entity_number": 85,
+        "name": "heat-pipe",
+        "position": {
+          "x": 6.5,
+          "y": 5.5
+        }
+      },
+      {
+        "entity_number": 86,
+        "name": "heat-pipe",
+        "position": {
+          "x": 7.5,
+          "y": 5.5
+        }
+      },
+      {
+        "entity_number": 87,
+        "name": "wooden-chest",
+        "position": {
+          "x": 10.5,
+          "y": 4.5
+        }
+      },
+      {
+        "entity_number": 88,
+        "name": "wooden-chest",
+        "position": {
+          "x": 11.5,
+          "y": 4.5
+        }
+      },
+      {
+        "entity_number": 89,
+        "name": "wooden-chest",
+        "position": {
+          "x": 10.5,
+          "y": 5.5
+        }
+      },
+      {
+        "entity_number": 90,
+        "name": "wooden-chest",
+        "position": {
+          "x": 11.5,
+          "y": 5.5
+        }
+      },
+      {
+        "entity_number": 91,
+        "name": "wooden-chest",
+        "position": {
+          "x": 12.5,
+          "y": 4.5
+        }
+      },
+      {
+        "entity_number": 92,
+        "name": "wooden-chest",
+        "position": {
+          "x": 13.5,
+          "y": 4.5
+        }
+      },
+      {
+        "entity_number": 93,
+        "name": "wooden-chest",
+        "position": {
+          "x": 12.5,
+          "y": 5.5
+        }
+      },
+      {
+        "entity_number": 94,
+        "name": "wooden-chest",
+        "position": {
+          "x": 13.5,
+          "y": 5.5
+        }
+      },
+      {
+        "entity_number": 95,
+        "name": "stone-wall",
+        "position": {
+          "x": 16.5,
+          "y": 4.5
+        }
+      },
+      {
+        "entity_number": 96,
+        "name": "stone-wall",
+        "position": {
+          "x": 17.5,
+          "y": 4.5
+        }
+      },
+      {
+        "entity_number": 97,
+        "name": "stone-wall",
+        "position": {
+          "x": 16.5,
+          "y": 5.5
+        }
+      },
+      {
+        "entity_number": 98,
+        "name": "stone-wall",
+        "position": {
+          "x": 17.5,
+          "y": 5.5
+        }
+      },
+      {
+        "entity_number": 99,
+        "name": "stone-wall",
+        "position": {
+          "x": 18.5,
+          "y": 4.5
+        }
+      },
+      {
+        "entity_number": 100,
+        "name": "stone-wall",
+        "position": {
+          "x": 19.5,
+          "y": 4.5
+        }
+      },
+      {
+        "entity_number": 101,
+        "name": "stone-wall",
+        "position": {
+          "x": 18.5,
+          "y": 5.5
+        }
+      },
+      {
+        "entity_number": 102,
+        "name": "stone-wall",
+        "position": {
+          "x": 19.5,
+          "y": 5.5
+        }
+      },
+      {
+        "entity_number": 103,
+        "name": "accumulator",
+        "position": {
+          "x": 23,
+          "y": 5
+        }
+      },
+      {
+        "entity_number": 104,
+        "name": "accumulator",
+        "position": {
+          "x": 25,
+          "y": 5
+        }
+      },
+      {
+        "entity_number": 105,
+        "name": "gun-turret",
+        "position": {
+          "x": 29,
+          "y": 5
+        }
+      },
+      {
+        "entity_number": 106,
+        "name": "gun-turret",
+        "position": {
+          "x": 31,
+          "y": 5
+        }
+      },
+      {
+        "entity_number": 107,
+        "name": "accumulator",
+        "position": {
+          "x": -1,
+          "y": 7
+        }
+      },
+      {
+        "entity_number": 108,
+        "name": "accumulator",
+        "position": {
+          "x": 1,
+          "y": 7
+        }
+      },
+      {
+        "entity_number": 109,
+        "name": "heat-pipe",
+        "position": {
+          "x": 4.5,
+          "y": 6.5
+        }
+      },
+      {
+        "entity_number": 110,
+        "name": "heat-pipe",
+        "position": {
+          "x": 5.5,
+          "y": 6.5
+        }
+      },
+      {
+        "entity_number": 111,
+        "name": "heat-pipe",
+        "position": {
+          "x": 4.5,
+          "y": 7.5
+        }
+      },
+      {
+        "entity_number": 112,
+        "name": "heat-pipe",
+        "position": {
+          "x": 5.5,
+          "y": 7.5
+        }
+      },
+      {
+        "entity_number": 113,
+        "name": "heat-pipe",
+        "position": {
+          "x": 6.5,
+          "y": 6.5
+        }
+      },
+      {
+        "entity_number": 114,
+        "name": "heat-pipe",
+        "position": {
+          "x": 7.5,
+          "y": 6.5
+        }
+      },
+      {
+        "entity_number": 115,
+        "name": "heat-pipe",
+        "position": {
+          "x": 6.5,
+          "y": 7.5
+        }
+      },
+      {
+        "entity_number": 116,
+        "name": "heat-pipe",
+        "position": {
+          "x": 7.5,
+          "y": 7.5
+        }
+      },
+      {
+        "entity_number": 117,
+        "name": "wooden-chest",
+        "position": {
+          "x": 10.5,
+          "y": 6.5
+        }
+      },
+      {
+        "entity_number": 118,
+        "name": "wooden-chest",
+        "position": {
+          "x": 11.5,
+          "y": 6.5
+        }
+      },
+      {
+        "entity_number": 119,
+        "name": "wooden-chest",
+        "position": {
+          "x": 10.5,
+          "y": 7.5
+        }
+      },
+      {
+        "entity_number": 120,
+        "name": "wooden-chest",
+        "position": {
+          "x": 11.5,
+          "y": 7.5
+        }
+      },
+      {
+        "entity_number": 121,
+        "name": "wooden-chest",
+        "position": {
+          "x": 12.5,
+          "y": 6.5
+        }
+      },
+      {
+        "entity_number": 122,
+        "name": "wooden-chest",
+        "position": {
+          "x": 13.5,
+          "y": 6.5
+        }
+      },
+      {
+        "entity_number": 123,
+        "name": "wooden-chest",
+        "position": {
+          "x": 12.5,
+          "y": 7.5
+        }
+      },
+      {
+        "entity_number": 124,
+        "name": "wooden-chest",
+        "position": {
+          "x": 13.5,
+          "y": 7.5
+        }
+      },
+      {
+        "entity_number": 125,
+        "name": "stone-wall",
+        "position": {
+          "x": 16.5,
+          "y": 6.5
+        }
+      },
+      {
+        "entity_number": 126,
+        "name": "stone-wall",
+        "position": {
+          "x": 17.5,
+          "y": 6.5
+        }
+      },
+      {
+        "entity_number": 127,
+        "name": "stone-wall",
+        "position": {
+          "x": 16.5,
+          "y": 7.5
+        }
+      },
+      {
+        "entity_number": 128,
+        "name": "stone-wall",
+        "position": {
+          "x": 17.5,
+          "y": 7.5
+        }
+      },
+      {
+        "entity_number": 129,
+        "name": "stone-wall",
+        "position": {
+          "x": 18.5,
+          "y": 6.5
+        }
+      },
+      {
+        "entity_number": 130,
+        "name": "stone-wall",
+        "position": {
+          "x": 19.5,
+          "y": 6.5
+        }
+      },
+      {
+        "entity_number": 131,
+        "name": "stone-wall",
+        "position": {
+          "x": 18.5,
+          "y": 7.5
+        }
+      },
+      {
+        "entity_number": 132,
+        "name": "stone-wall",
+        "position": {
+          "x": 19.5,
+          "y": 7.5
+        }
+      },
+      {
+        "entity_number": 133,
+        "name": "accumulator",
+        "position": {
+          "x": 23,
+          "y": 7
+        }
+      },
+      {
+        "entity_number": 134,
+        "name": "accumulator",
+        "position": {
+          "x": 25,
+          "y": 7
+        }
+      },
+      {
+        "entity_number": 135,
+        "name": "gun-turret",
+        "position": {
+          "x": 29,
+          "y": 7
+        }
+      },
+      {
+        "entity_number": 136,
+        "name": "gun-turret",
+        "position": {
+          "x": 31,
+          "y": 7
+        }
+      },
+      {
+        "entity_number": 137,
+        "name": "wooden-chest",
+        "position": {
+          "x": -1.5,
+          "y": 10.5
+        }
+      },
+      {
+        "entity_number": 138,
+        "name": "wooden-chest",
+        "position": {
+          "x": -0.5,
+          "y": 10.5
+        }
+      },
+      {
+        "entity_number": 139,
+        "name": "wooden-chest",
+        "position": {
+          "x": -1.5,
+          "y": 11.5
+        }
+      },
+      {
+        "entity_number": 140,
+        "name": "wooden-chest",
+        "position": {
+          "x": -0.5,
+          "y": 11.5
+        }
+      },
+      {
+        "entity_number": 141,
+        "name": "wooden-chest",
+        "position": {
+          "x": 0.5,
+          "y": 10.5
+        }
+      },
+      {
+        "entity_number": 142,
+        "name": "wooden-chest",
+        "position": {
+          "x": 1.5,
+          "y": 10.5
+        }
+      },
+      {
+        "entity_number": 143,
+        "name": "wooden-chest",
+        "position": {
+          "x": 0.5,
+          "y": 11.5
+        }
+      },
+      {
+        "entity_number": 144,
+        "name": "wooden-chest",
+        "position": {
+          "x": 1.5,
+          "y": 11.5
+        }
+      },
+      {
+        "entity_number": 145,
+        "name": "heat-pipe",
+        "position": {
+          "x": 4.5,
+          "y": 10.5
+        }
+      },
+      {
+        "entity_number": 146,
+        "name": "heat-pipe",
+        "position": {
+          "x": 5.5,
+          "y": 10.5
+        }
+      },
+      {
+        "entity_number": 147,
+        "name": "heat-pipe",
+        "position": {
+          "x": 4.5,
+          "y": 11.5
+        }
+      },
+      {
+        "entity_number": 148,
+        "name": "heat-pipe",
+        "position": {
+          "x": 5.5,
+          "y": 11.5
+        }
+      },
+      {
+        "entity_number": 149,
+        "name": "heat-pipe",
+        "position": {
+          "x": 6.5,
+          "y": 10.5
+        }
+      },
+      {
+        "entity_number": 150,
+        "name": "heat-pipe",
+        "position": {
+          "x": 7.5,
+          "y": 10.5
+        }
+      },
+      {
+        "entity_number": 151,
+        "name": "heat-pipe",
+        "position": {
+          "x": 6.5,
+          "y": 11.5
+        }
+      },
+      {
+        "entity_number": 152,
+        "name": "heat-pipe",
+        "position": {
+          "x": 7.5,
+          "y": 11.5
+        }
+      },
+      {
+        "entity_number": 153,
+        "name": "pipe-to-ground",
+        "position": {
+          "x": 10.5,
+          "y": 10.5
+        },
+        "direction": 4
+      },
+      {
+        "entity_number": 154,
+        "name": "pipe-to-ground",
+        "position": {
+          "x": 11.5,
+          "y": 10.5
+        },
+        "direction": 4
+      },
+      {
+        "entity_number": 155,
+        "name": "pipe-to-ground",
+        "position": {
+          "x": 10.5,
+          "y": 11.5
+        },
+        "direction": 4
+      },
+      {
+        "entity_number": 156,
+        "name": "pipe-to-ground",
+        "position": {
+          "x": 11.5,
+          "y": 11.5
+        },
+        "direction": 4
+      },
+      {
+        "entity_number": 157,
+        "name": "pipe-to-ground",
+        "position": {
+          "x": 12.5,
+          "y": 10.5
+        },
+        "direction": 4
+      },
+      {
+        "entity_number": 158,
+        "name": "pipe-to-ground",
+        "position": {
+          "x": 13.5,
+          "y": 10.5
+        },
+        "direction": 4
+      },
+      {
+        "entity_number": 159,
+        "name": "pipe-to-ground",
+        "position": {
+          "x": 12.5,
+          "y": 11.5
+        },
+        "direction": 4
+      },
+      {
+        "entity_number": 160,
+        "name": "pipe-to-ground",
+        "position": {
+          "x": 13.5,
+          "y": 11.5
+        },
+        "direction": 4
+      },
+      {
+        "entity_number": 161,
+        "name": "wooden-chest",
+        "position": {
+          "x": 16.5,
+          "y": 10.5
+        }
+      },
+      {
+        "entity_number": 162,
+        "name": "wooden-chest",
+        "position": {
+          "x": 17.5,
+          "y": 10.5
+        }
+      },
+      {
+        "entity_number": 163,
+        "name": "wooden-chest",
+        "position": {
+          "x": 16.5,
+          "y": 11.5
+        }
+      },
+      {
+        "entity_number": 164,
+        "name": "wooden-chest",
+        "position": {
+          "x": 17.5,
+          "y": 11.5
+        }
+      },
+      {
+        "entity_number": 165,
+        "name": "wooden-chest",
+        "position": {
+          "x": 18.5,
+          "y": 10.5
+        }
+      },
+      {
+        "entity_number": 166,
+        "name": "wooden-chest",
+        "position": {
+          "x": 19.5,
+          "y": 10.5
+        }
+      },
+      {
+        "entity_number": 167,
+        "name": "wooden-chest",
+        "position": {
+          "x": 18.5,
+          "y": 11.5
+        }
+      },
+      {
+        "entity_number": 168,
+        "name": "wooden-chest",
+        "position": {
+          "x": 19.5,
+          "y": 11.5
+        }
+      },
+      {
+        "entity_number": 169,
+        "name": "pump",
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "direction": 4
+      },
+      {
+        "entity_number": 170,
+        "name": "pump",
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "direction": 4
+      },
+      {
+        "entity_number": 171,
+        "name": "pump",
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "direction": 4
+      },
+      {
+        "entity_number": 172,
+        "name": "pump",
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "direction": 4
+      },
+      {
+        "entity_number": 173,
+        "name": "straight-rail",
+        "position": {
+          "x": 29,
+          "y": 11
+        }
+      },
+      {
+        "entity_number": 174,
+        "name": "straight-rail",
+        "position": {
+          "x": 31,
+          "y": 11
+        }
+      },
+      {
+        "entity_number": 175,
+        "name": "wooden-chest",
+        "position": {
+          "x": -1.5,
+          "y": 12.5
+        }
+      },
+      {
+        "entity_number": 176,
+        "name": "wooden-chest",
+        "position": {
+          "x": -0.5,
+          "y": 12.5
+        }
+      },
+      {
+        "entity_number": 177,
+        "name": "wooden-chest",
+        "position": {
+          "x": -1.5,
+          "y": 13.5
+        }
+      },
+      {
+        "entity_number": 178,
+        "name": "wooden-chest",
+        "position": {
+          "x": -0.5,
+          "y": 13.5
+        }
+      },
+      {
+        "entity_number": 179,
+        "name": "wooden-chest",
+        "position": {
+          "x": 0.5,
+          "y": 12.5
+        }
+      },
+      {
+        "entity_number": 180,
+        "name": "wooden-chest",
+        "position": {
+          "x": 1.5,
+          "y": 12.5
+        }
+      },
+      {
+        "entity_number": 181,
+        "name": "wooden-chest",
+        "position": {
+          "x": 0.5,
+          "y": 13.5
+        }
+      },
+      {
+        "entity_number": 182,
+        "name": "wooden-chest",
+        "position": {
+          "x": 1.5,
+          "y": 13.5
+        }
+      },
+      {
+        "entity_number": 183,
+        "name": "heat-pipe",
+        "position": {
+          "x": 4.5,
+          "y": 12.5
+        }
+      },
+      {
+        "entity_number": 184,
+        "name": "heat-pipe",
+        "position": {
+          "x": 5.5,
+          "y": 12.5
+        }
+      },
+      {
+        "entity_number": 185,
+        "name": "heat-pipe",
+        "position": {
+          "x": 4.5,
+          "y": 13.5
+        }
+      },
+      {
+        "entity_number": 186,
+        "name": "heat-pipe",
+        "position": {
+          "x": 5.5,
+          "y": 13.5
+        }
+      },
+      {
+        "entity_number": 187,
+        "name": "heat-pipe",
+        "position": {
+          "x": 6.5,
+          "y": 12.5
+        }
+      },
+      {
+        "entity_number": 188,
+        "name": "heat-pipe",
+        "position": {
+          "x": 7.5,
+          "y": 12.5
+        }
+      },
+      {
+        "entity_number": 189,
+        "name": "heat-pipe",
+        "position": {
+          "x": 6.5,
+          "y": 13.5
+        }
+      },
+      {
+        "entity_number": 190,
+        "name": "heat-pipe",
+        "position": {
+          "x": 7.5,
+          "y": 13.5
+        }
+      },
+      {
+        "entity_number": 191,
+        "name": "pipe-to-ground",
+        "position": {
+          "x": 10.5,
+          "y": 12.5
+        },
+        "direction": 4
+      },
+      {
+        "entity_number": 192,
+        "name": "pipe-to-ground",
+        "position": {
+          "x": 11.5,
+          "y": 12.5
+        },
+        "direction": 4
+      },
+      {
+        "entity_number": 193,
+        "name": "pipe-to-ground",
+        "position": {
+          "x": 10.5,
+          "y": 13.5
+        },
+        "direction": 4
+      },
+      {
+        "entity_number": 194,
+        "name": "pipe-to-ground",
+        "position": {
+          "x": 11.5,
+          "y": 13.5
+        },
+        "direction": 4
+      },
+      {
+        "entity_number": 195,
+        "name": "pipe-to-ground",
+        "position": {
+          "x": 12.5,
+          "y": 12.5
+        },
+        "direction": 4
+      },
+      {
+        "entity_number": 196,
+        "name": "pipe-to-ground",
+        "position": {
+          "x": 13.5,
+          "y": 12.5
+        },
+        "direction": 4
+      },
+      {
+        "entity_number": 197,
+        "name": "pipe-to-ground",
+        "position": {
+          "x": 12.5,
+          "y": 13.5
+        },
+        "direction": 4
+      },
+      {
+        "entity_number": 198,
+        "name": "pipe-to-ground",
+        "position": {
+          "x": 13.5,
+          "y": 13.5
+        },
+        "direction": 4
+      },
+      {
+        "entity_number": 199,
+        "name": "wooden-chest",
+        "position": {
+          "x": 16.5,
+          "y": 12.5
+        }
+      },
+      {
+        "entity_number": 200,
+        "name": "wooden-chest",
+        "position": {
+          "x": 17.5,
+          "y": 12.5
+        }
+      },
+      {
+        "entity_number": 201,
+        "name": "wooden-chest",
+        "position": {
+          "x": 16.5,
+          "y": 13.5
+        }
+      },
+      {
+        "entity_number": 202,
+        "name": "wooden-chest",
+        "position": {
+          "x": 17.5,
+          "y": 13.5
+        }
+      },
+      {
+        "entity_number": 203,
+        "name": "wooden-chest",
+        "position": {
+          "x": 18.5,
+          "y": 12.5
+        }
+      },
+      {
+        "entity_number": 204,
+        "name": "wooden-chest",
+        "position": {
+          "x": 19.5,
+          "y": 12.5
+        }
+      },
+      {
+        "entity_number": 205,
+        "name": "wooden-chest",
+        "position": {
+          "x": 18.5,
+          "y": 13.5
+        }
+      },
+      {
+        "entity_number": 206,
+        "name": "wooden-chest",
+        "position": {
+          "x": 19.5,
+          "y": 13.5
+        }
+      },
+      {
+        "entity_number": 207,
+        "name": "pump",
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "direction": 4
+      },
+      {
+        "entity_number": 208,
+        "name": "pump",
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "direction": 4
+      },
+      {
+        "entity_number": 209,
+        "name": "pump",
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "direction": 4
+      },
+      {
+        "entity_number": 210,
+        "name": "pump",
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "direction": 4
+      },
+      {
+        "entity_number": 211,
+        "name": "straight-rail",
+        "position": {
+          "x": 29,
+          "y": 13
+        }
+      },
+      {
+        "entity_number": 212,
+        "name": "straight-rail",
+        "position": {
+          "x": 31,
+          "y": 13
+        }
+      },
+      {
+        "entity_number": 213,
+        "name": "laser-turret",
+        "position": {
+          "x": -1,
+          "y": 17
+        }
+      },
+      {
+        "entity_number": 214,
+        "name": "laser-turret",
+        "position": {
+          "x": 1,
+          "y": 17
+        }
+      },
+      {
+        "entity_number": 215,
+        "name": "laser-turret",
+        "position": {
+          "x": -1,
+          "y": 19
+        }
+      },
+      {
+        "entity_number": 216,
+        "name": "laser-turret",
+        "position": {
+          "x": 1,
+          "y": 19
+        }
+      }
+    ],
+    "tiles": [
+      {
+        "position": {
+          "x": 4,
+          "y": 10
+        },
+        "name": "stone-path"
+      },
+      {
+        "position": {
+          "x": 5,
+          "y": 10
+        },
+        "name": "stone-path"
+      },
+      {
+        "position": {
+          "x": 4,
+          "y": 11
+        },
+        "name": "stone-path"
+      },
+      {
+        "position": {
+          "x": 5,
+          "y": 11
+        },
+        "name": "stone-path"
+      },
+      {
+        "position": {
+          "x": 5,
+          "y": 10
+        },
+        "name": "stone-path"
+      },
+      {
+        "position": {
+          "x": 6,
+          "y": 10
+        },
+        "name": "stone-path"
+      },
+      {
+        "position": {
+          "x": 5,
+          "y": 11
+        },
+        "name": "stone-path"
+      },
+      {
+        "position": {
+          "x": 6,
+          "y": 11
+        },
+        "name": "stone-path"
+      },
+      {
+        "position": {
+          "x": 7,
+          "y": 10
+        },
+        "name": "concrete"
+      },
+      {
+        "position": {
+          "x": 8,
+          "y": 10
+        },
+        "name": "concrete"
+      },
+      {
+        "position": {
+          "x": 7,
+          "y": 11
+        },
+        "name": "concrete"
+      },
+      {
+        "position": {
+          "x": 8,
+          "y": 11
+        },
+        "name": "concrete"
+      },
+      {
+        "position": {
+          "x": 8,
+          "y": 10
+        },
+        "name": "concrete"
+      },
+      {
+        "position": {
+          "x": 9,
+          "y": 10
+        },
+        "name": "concrete"
+      },
+      {
+        "position": {
+          "x": 8,
+          "y": 11
+        },
+        "name": "concrete"
+      },
+      {
+        "position": {
+          "x": 9,
+          "y": 11
+        },
+        "name": "concrete"
+      },
+      {
+        "position": {
+          "x": 10,
+          "y": 10
+        },
+        "name": "hazard-concrete-left"
+      },
+      {
+        "position": {
+          "x": 11,
+          "y": 10
+        },
+        "name": "hazard-concrete-left"
+      },
+      {
+        "position": {
+          "x": 10,
+          "y": 11
+        },
+        "name": "hazard-concrete-left"
+      },
+      {
+        "position": {
+          "x": 11,
+          "y": 11
+        },
+        "name": "hazard-concrete-left"
+      },
+      {
+        "position": {
+          "x": 11,
+          "y": 10
+        },
+        "name": "hazard-concrete-left"
+      },
+      {
+        "position": {
+          "x": 12,
+          "y": 10
+        },
+        "name": "hazard-concrete-left"
+      },
+      {
+        "position": {
+          "x": 11,
+          "y": 11
+        },
+        "name": "hazard-concrete-left"
+      },
+      {
+        "position": {
+          "x": 12,
+          "y": 11
+        },
+        "name": "hazard-concrete-left"
+      },
+      {
+        "position": {
+          "x": 13,
+          "y": 10
+        },
+        "name": "refined-concrete"
+      },
+      {
+        "position": {
+          "x": 14,
+          "y": 10
+        },
+        "name": "refined-concrete"
+      },
+      {
+        "position": {
+          "x": 13,
+          "y": 11
+        },
+        "name": "refined-concrete"
+      },
+      {
+        "position": {
+          "x": 14,
+          "y": 11
+        },
+        "name": "refined-concrete"
+      },
+      {
+        "position": {
+          "x": 14,
+          "y": 10
+        },
+        "name": "refined-concrete"
+      },
+      {
+        "position": {
+          "x": 15,
+          "y": 10
+        },
+        "name": "refined-concrete"
+      },
+      {
+        "position": {
+          "x": 14,
+          "y": 11
+        },
+        "name": "refined-concrete"
+      },
+      {
+        "position": {
+          "x": 15,
+          "y": 11
+        },
+        "name": "refined-concrete"
+      },
+      {
+        "position": {
+          "x": 16,
+          "y": 10
+        },
+        "name": "refined-hazard-concrete-left"
+      },
+      {
+        "position": {
+          "x": 17,
+          "y": 10
+        },
+        "name": "refined-hazard-concrete-left"
+      },
+      {
+        "position": {
+          "x": 16,
+          "y": 11
+        },
+        "name": "refined-hazard-concrete-left"
+      },
+      {
+        "position": {
+          "x": 17,
+          "y": 11
+        },
+        "name": "refined-hazard-concrete-left"
+      },
+      {
+        "position": {
+          "x": 17,
+          "y": 10
+        },
+        "name": "refined-hazard-concrete-left"
+      },
+      {
+        "position": {
+          "x": 18,
+          "y": 10
+        },
+        "name": "refined-hazard-concrete-left"
+      },
+      {
+        "position": {
+          "x": 17,
+          "y": 11
+        },
+        "name": "refined-hazard-concrete-left"
+      },
+      {
+        "position": {
+          "x": 18,
+          "y": 11
+        },
+        "name": "refined-hazard-concrete-left"
+      },
+      {
+        "position": {
+          "x": 4,
+          "y": 11
+        },
+        "name": "stone-path"
+      },
+      {
+        "position": {
+          "x": 5,
+          "y": 11
+        },
+        "name": "stone-path"
+      },
+      {
+        "position": {
+          "x": 4,
+          "y": 12
+        },
+        "name": "stone-path"
+      },
+      {
+        "position": {
+          "x": 5,
+          "y": 12
+        },
+        "name": "stone-path"
+      },
+      {
+        "position": {
+          "x": 5,
+          "y": 11
+        },
+        "name": "stone-path"
+      },
+      {
+        "position": {
+          "x": 6,
+          "y": 11
+        },
+        "name": "stone-path"
+      },
+      {
+        "position": {
+          "x": 5,
+          "y": 12
+        },
+        "name": "stone-path"
+      },
+      {
+        "position": {
+          "x": 6,
+          "y": 12
+        },
+        "name": "stone-path"
+      },
+      {
+        "position": {
+          "x": 7,
+          "y": 11
+        },
+        "name": "concrete"
+      },
+      {
+        "position": {
+          "x": 8,
+          "y": 11
+        },
+        "name": "concrete"
+      },
+      {
+        "position": {
+          "x": 7,
+          "y": 12
+        },
+        "name": "concrete"
+      },
+      {
+        "position": {
+          "x": 8,
+          "y": 12
+        },
+        "name": "concrete"
+      },
+      {
+        "position": {
+          "x": 8,
+          "y": 11
+        },
+        "name": "concrete"
+      },
+      {
+        "position": {
+          "x": 9,
+          "y": 11
+        },
+        "name": "concrete"
+      },
+      {
+        "position": {
+          "x": 8,
+          "y": 12
+        },
+        "name": "concrete"
+      },
+      {
+        "position": {
+          "x": 9,
+          "y": 12
+        },
+        "name": "concrete"
+      },
+      {
+        "position": {
+          "x": 10,
+          "y": 11
+        },
+        "name": "hazard-concrete-left"
+      },
+      {
+        "position": {
+          "x": 11,
+          "y": 11
+        },
+        "name": "hazard-concrete-left"
+      },
+      {
+        "position": {
+          "x": 10,
+          "y": 12
+        },
+        "name": "hazard-concrete-left"
+      },
+      {
+        "position": {
+          "x": 11,
+          "y": 12
+        },
+        "name": "hazard-concrete-left"
+      },
+      {
+        "position": {
+          "x": 11,
+          "y": 11
+        },
+        "name": "hazard-concrete-left"
+      },
+      {
+        "position": {
+          "x": 12,
+          "y": 11
+        },
+        "name": "hazard-concrete-left"
+      },
+      {
+        "position": {
+          "x": 11,
+          "y": 12
+        },
+        "name": "hazard-concrete-left"
+      },
+      {
+        "position": {
+          "x": 12,
+          "y": 12
+        },
+        "name": "hazard-concrete-left"
+      },
+      {
+        "position": {
+          "x": 13,
+          "y": 11
+        },
+        "name": "refined-concrete"
+      },
+      {
+        "position": {
+          "x": 14,
+          "y": 11
+        },
+        "name": "refined-concrete"
+      },
+      {
+        "position": {
+          "x": 13,
+          "y": 12
+        },
+        "name": "refined-concrete"
+      },
+      {
+        "position": {
+          "x": 14,
+          "y": 12
+        },
+        "name": "refined-concrete"
+      },
+      {
+        "position": {
+          "x": 14,
+          "y": 11
+        },
+        "name": "refined-concrete"
+      },
+      {
+        "position": {
+          "x": 15,
+          "y": 11
+        },
+        "name": "refined-concrete"
+      },
+      {
+        "position": {
+          "x": 14,
+          "y": 12
+        },
+        "name": "refined-concrete"
+      },
+      {
+        "position": {
+          "x": 15,
+          "y": 12
+        },
+        "name": "refined-concrete"
+      },
+      {
+        "position": {
+          "x": 16,
+          "y": 11
+        },
+        "name": "refined-hazard-concrete-left"
+      },
+      {
+        "position": {
+          "x": 17,
+          "y": 11
+        },
+        "name": "refined-hazard-concrete-left"
+      },
+      {
+        "position": {
+          "x": 16,
+          "y": 12
+        },
+        "name": "refined-hazard-concrete-left"
+      },
+      {
+        "position": {
+          "x": 17,
+          "y": 12
+        },
+        "name": "refined-hazard-concrete-left"
+      },
+      {
+        "position": {
+          "x": 17,
+          "y": 11
+        },
+        "name": "refined-hazard-concrete-left"
+      },
+      {
+        "position": {
+          "x": 18,
+          "y": 11
+        },
+        "name": "refined-hazard-concrete-left"
+      },
+      {
+        "position": {
+          "x": 17,
+          "y": 12
+        },
+        "name": "refined-hazard-concrete-left"
+      },
+      {
+        "position": {
+          "x": 18,
+          "y": 12
+        },
+        "name": "refined-hazard-concrete-left"
+      }
+    ],
+    "item": "blueprint",
+    "label": "Image",
+    "version": 281479273906176
+  }
+}
