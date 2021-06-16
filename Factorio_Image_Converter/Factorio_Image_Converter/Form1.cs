@@ -8,6 +8,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.IO;
+using System.IO.Compression;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,7 +34,7 @@ namespace Factorio_Image_Converter
         List<UTile> AvailableTiles;
         List<Color> AvailableColors;
         List<Color> ImageColors;
-        //Dictionary that ties image colors with factorio blocks
+        //TODO: Dictionary that ties image colors with factorio blocks
         Root FactorioBlueprint;
 
         public Form1()
@@ -85,7 +86,7 @@ namespace Factorio_Image_Converter
 
         private void Switch_Image(object sender, EventArgs e)
         {
-            Debug.WriteLine("Image compressed > " + imageCompressed);
+            //Debug.WriteLine("Image compressed > " + imageCompressed);
             Image ImageToSet;
             if (rb_Original.Checked)
             {
@@ -172,7 +173,7 @@ namespace Factorio_Image_Converter
 
                                 List<Entity> entityList = new List<Entity>();
                                 //TODO: Finish and optimize this
-                                //Maybe use some "equation" to determin the position based on size?
+                                //Maybe use some "equation" to determine the position and entity amount based on size?
                                 if (sizeX == 1 && sizeY == 1)
                                 {
                                     Entity entity1 = new Entity();
@@ -324,9 +325,28 @@ namespace Factorio_Image_Converter
             defaultIcon.index = 1;
             FactorioBlueprint.blueprint.icons.Add(defaultIcon);
         }
-        private void ConvertJSONToBlueprint()
+        public void ConvertBlocksToJSON(string path)
+        {
+            using (StreamWriter sw = File.CreateText(path))
+            {
+                JsonSerializer jsonSerializer = new JsonSerializer();
+                jsonSerializer.Serialize(sw, FactorioBlueprint);
+            }
+            Debug.WriteLine("saved JSON to \""+path+"\"");
+        }
+        private void ConvertJSONToBlueprint(string path)
         {
             //compress the JSON file using zlib deflate compression level 9, then convert to base64 and put '0' at the start
+
+            /*
+            using (FileStream jsonFileStream = File.OpenRead(path))
+            {
+                using (DeflateStream decompressionStream = new DeflateStream(jsonFileStream, CompressionLevel.))
+                {
+
+                }
+            }
+            */
         }
         private void LoadAvailableBlocks()
         {
@@ -448,17 +468,14 @@ namespace Factorio_Image_Converter
         private void btn_Export_Click(object sender, EventArgs e)
         {
             ConvertImageToBlocks(ResultImage);       //This will convert only available colors in the image to blocks, so for now input can be only made from those colors
-            //File.WriteAllText(@"..\..\Blueprint.json", JsonConvert.SerializeObject(FactorioBlueprint));
-            using (StreamWriter sw = File.CreateText(@"..\..\Blueprint.json"))
-            {
-                JsonSerializer jsonSerializer = new JsonSerializer();
-                jsonSerializer.Serialize(sw,FactorioBlueprint);
-            }
-            Debug.WriteLine("exported JSON to \"..\\..\\Blueprint.json\"");
+            ConvertBlocksToJSON(@"..\..\Blueprint.json");
+            ConvertJSONToBlueprint(@"..\..\Blueprint.json");
+
+            
         }
         private void FeatureNotImplemented(object sender, EventArgs e)
         {
-            MessageBox.Show("I'm sorry but this feature is not yet implemented");
+            MessageBox.Show("I'm sorry but this feature is not yet implemented");  
         }
     }
 }
