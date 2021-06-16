@@ -175,7 +175,6 @@ namespace Factorio_Image_Converter
                                 //Maybe use some "equation" to determin the position based on size?
                                 if (sizeX == 1 && sizeY == 1)
                                 {
-                                    Debug.WriteLine("1x1");
                                     Entity entity1 = new Entity();
                                     Entity entity2 = new Entity();
                                     Entity entity3 = new Entity();
@@ -204,13 +203,14 @@ namespace Factorio_Image_Converter
                                 }
                                 else if (sizeX == 2 && sizeY == 1)
                                 {
-                                    Debug.WriteLine("2x1");
                                     Entity entity1 = new Entity();
                                     Entity entity2 = new Entity();
                                     Position pos1 = new Position();
                                     Position pos2 = new Position();
                                     pos1.x = x + x - 1;
-                                    //TODO: Solve position
+                                    pos1.y = y + y - 1.5;
+                                    pos2.x = x + x - 1;
+                                    pos2.y = y + y - 0.5;
 
                                     entity1.position = pos1;
                                     entity2.position = pos2;
@@ -223,7 +223,10 @@ namespace Factorio_Image_Converter
                                     Entity entity2 = new Entity();
                                     Position pos1 = new Position();
                                     Position pos2 = new Position();
-                                    //TODO: Solve position
+                                    pos1.x = x + x - 1.5;
+                                    pos1.y = y + y - 1;
+                                    pos2.x = x + x - 0.5;
+                                    pos2.y = y + y - 1;
 
                                     entity1.position = pos1;
                                     entity2.position = pos2;
@@ -258,7 +261,7 @@ namespace Factorio_Image_Converter
                                 break;
                             }
                         }
-                        //only iterate through if we haven't found a block, otherwise it just slows the app down
+                        //TODO: only iterate through if we haven't found a block, otherwise it just slows the app down
                         foreach(UTile tile in AvailableTiles)
                         {
                             //Debug.WriteLine("pixel > " + pixelColorHex + " tile > " + tile.color);
@@ -323,14 +326,14 @@ namespace Factorio_Image_Converter
         }
         private void ConvertJSONToBlueprint()
         {
-            //compress the JSON file using zlib deflate compression level 9, then convert to base64 and put 0 at the start
+            //compress the JSON file using zlib deflate compression level 9, then convert to base64 and put '0' at the start
         }
         private void LoadAvailableBlocks()
         {
             //Loads Factorio Blocks and their colors from a JSON file into a List
             StreamReader sr = new StreamReader(@"..\..\Usable-Blocks.json");
             string jsonString = sr.ReadToEnd();
-            URoot uRoot = JsonConvert.DeserializeObject<URoot>(jsonString);
+            URoot uRoot = JsonConvert.DeserializeObject<URoot>(jsonString); //Populate the C# structure with JSON data
             foreach (UBlock block in uRoot.UsableBlocks.UBlocks)
             {
                 AvailableBlocks.Add(block);
