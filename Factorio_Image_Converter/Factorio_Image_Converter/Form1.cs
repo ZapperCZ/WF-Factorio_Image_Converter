@@ -130,7 +130,7 @@ namespace Factorio_Image_Converter
         }
         private void GetAllImageColors()
         {
-
+            //TODO: Get all colors from the image (maybe with some range that represents 1 color?) and save them into List
         }
         private void ConvertImageColors()
         {
@@ -146,7 +146,7 @@ namespace Factorio_Image_Converter
             int totalPixels = 0;
             Bitmap bitmap = (Bitmap)inputImage;
             for (int y = 0; y < bitmap.Height; y++)
-            {
+            {   
                 for (int x = 0; x < bitmap.Width; x++)
                 {
                     //Debug.WriteLine("x > "+x+" y > "+y);
@@ -161,7 +161,7 @@ namespace Factorio_Image_Converter
                             if (pixelColorHex == block.color)
                             {
                                 found++;
-                                Debug.WriteLine("block");
+                                //Debug.WriteLine("block");
                                 //All positions must be 0.5 because of rails, rails are 0.0
                                 //Coordinates are based on mathematics, not IT
                                 //Entities are listed through in pairs of 4, so top left, top right, bottom left, bottom right
@@ -170,9 +170,11 @@ namespace Factorio_Image_Converter
                                 //Debug.WriteLine("orig > " + block.occupied_space + " x > " + sizeX + " y > " + sizeY);
 
                                 List<Entity> entityList = new List<Entity>();
-                                //TODO: Optimize this code below
-                                if (sizeX == 1 && sizeY == 1)   //Doesn't trigger, find out why
+                                //TODO: Finish and optimize this
+                                //Maybe use some "equation" to determin the position based on size?
+                                if (sizeX == 1 && sizeY == 1)
                                 {
+                                    Debug.WriteLine("1x1");
                                     Entity entity1 = new Entity();
                                     Entity entity2 = new Entity();
                                     Entity entity3 = new Entity();
@@ -181,47 +183,38 @@ namespace Factorio_Image_Converter
                                     Position pos2 = new Position();
                                     Position pos3 = new Position();
                                     Position pos4 = new Position();
-                                    /*
-                                    //Debug.WriteLine("index before > " + index);
-                                    entity1.entity_number = index++;
-                                    entity2.entity_number = index++;
-                                    entity3.entity_number = index++;
-                                    entity4.entity_number = index++;
-                                    //Debug.WriteLine("index after > " + index);
-                                    entity1.name = block.name;
-                                    entity2.name = block.name;
-                                    entity3.name = block.name;
-                                    entity4.name = block.name;
-                                    */
-                                    pos1.x = x + 0.5;
-                                    pos1.y = y + 0.5;
-                                    pos2.x = x + 1.5;
-                                    pos2.y = y + 0.5;
-                                    pos3.x = x + 0.5;
-                                    pos3.y = y + 1.5;
-                                    pos4.x = x + 1.5;
-                                    pos4.y = y + 1.5;
+                                    pos1.x = x + x - 1.5;
+                                    pos1.y = y + y - 1.5;
+                                    pos2.x = x + x - 0.5;
+                                    pos2.y = y + y - 1.5;
+                                    pos3.x = x + x - 1.5;
+                                    pos3.y = y + y - 0.5;
+                                    pos4.x = x + x - 0.5;
+                                    pos4.y = y + y - 0.5;
 
-                                    /*
-                                    if (block.has_direction)
-                                    {
-                                        entity1.direction = 4;
-                                        entity2.direction = 4;
-                                        entity3.direction = 4;
-                                        entity4.direction = 4;
-                                    }
-                                    FactorioBlueprint.blueprint.entities.Add(entity1);
-                                    FactorioBlueprint.blueprint.entities.Add(entity2);
-                                    FactorioBlueprint.blueprint.entities.Add(entity3);
-                                    FactorioBlueprint.blueprint.entities.Add(entity4);
-                                    */
+                                    entity1.position = pos1;
+                                    entity2.position = pos2;
+                                    entity3.position = pos3;
+                                    entity4.position = pos4;
+                                    entityList.Add(entity1);
+                                    entityList.Add(entity2);
+                                    entityList.Add(entity3);
+                                    entityList.Add(entity4);
                                 }
                                 else if (sizeX == 2 && sizeY == 1)
                                 {
+                                    Debug.WriteLine("2x1");
                                     Entity entity1 = new Entity();
                                     Entity entity2 = new Entity();
                                     Position pos1 = new Position();
                                     Position pos2 = new Position();
+                                    pos1.x = x + x - 1;
+                                    //TODO: Solve position
+
+                                    entity1.position = pos1;
+                                    entity2.position = pos2;
+                                    entityList.Add(entity1);
+                                    entityList.Add(entity2);
                                 }
                                 else if (sizeX == 1 && sizeY == 2)
                                 {
@@ -229,28 +222,38 @@ namespace Factorio_Image_Converter
                                     Entity entity2 = new Entity();
                                     Position pos1 = new Position();
                                     Position pos2 = new Position();
+                                    //TODO: Solve position
+
+                                    entity1.position = pos1;
+                                    entity2.position = pos2;
+                                    entityList.Add(entity1);
+                                    entityList.Add(entity2);
                                 }
                                 else if (sizeX == 2 && sizeY == 2)
                                 {
                                     Entity entity1 = new Entity();
                                     Position pos = new Position();
-                                    //entity1.entity_number = index;
-                                    //entity1.name = block.name;
-                                    pos.x = x + 1;
-                                    pos.y = y + 1;
+                                    pos.x = x + x - 1;
+                                    pos.y = y + y - 1;
+                                    entity1.position = pos;
                                     entityList.Add(entity1);
                                 }
                                 foreach(Entity entity in entityList)
                                 {
                                     entity.entity_number = index++;
                                     entity.name = block.name;
+                                    if (block.name.Contains("underground"))
+                                    {
+                                        entity.type = "input";
+                                        entity.SType = true;
+                                    }
                                     if (block.has_direction)
                                     {
                                         entity.direction = 4;
+                                        entity.SDirection = true;
                                     }
                                     FactorioBlueprint.blueprint.entities.Add(entity);
                                 }
-                                index++;
                                 break;
                             }
                         }
@@ -260,9 +263,8 @@ namespace Factorio_Image_Converter
                             //Debug.WriteLine("pixel > " + pixelColorHex + " tile > " + tile.color);
                             if (pixelColorHex == tile.color)
                             {
-                                Debug.WriteLine("tile");
+                                //Debug.WriteLine("tile");
                                 found++;
-                                break;
                                 Tile tile1 = new Tile();
                                 Tile tile2 = new Tile();
                                 Tile tile3 = new Tile();
@@ -283,10 +285,16 @@ namespace Factorio_Image_Converter
                                 pos3.y = y + 2;
                                 pos4.x = x + 2;
                                 pos4.y = y + 2;
+                                tile1.position = pos1;
+                                tile2.position = pos2;
+                                tile3.position = pos3;
+                                tile4.position = pos4;
                                 FactorioBlueprint.blueprint.tiles.Add(tile1);
                                 FactorioBlueprint.blueprint.tiles.Add(tile2);
                                 FactorioBlueprint.blueprint.tiles.Add(tile3);
                                 FactorioBlueprint.blueprint.tiles.Add(tile4);
+
+                                break;
                             }
                         }
                     }

@@ -59,7 +59,7 @@
         "name": "pump",
         "color": "#7aa4bc",
         "occupied_space": "1x2",
-        "has_direction": false
+        "has_direction": true
       },
       {
         "name": "stone-wall",
