@@ -13,6 +13,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using zlib;
 
 namespace Factorio_Image_Converter
 {
@@ -28,6 +29,7 @@ namespace Factorio_Image_Converter
         int compressionRatio;
         int previousWidth;
         int previousHeight;
+        string Blueprint;
         Image OriginalImage;
         Image ResultImage;
         List<UBlock> AvailableBlocks;
@@ -282,14 +284,14 @@ namespace Factorio_Image_Converter
                                 tile2.name = tile.name;
                                 tile3.name = tile.name;
                                 tile4.name = tile.name;
-                                pos1.x = x + 1;
-                                pos1.y = y + 1;
-                                pos2.x = x + 2;
-                                pos2.y = y + 1;
-                                pos3.x = x + 1;
-                                pos3.y = y + 2;
-                                pos4.x = x + 2;
-                                pos4.y = y + 2;
+                                pos1.x = x + x - 2;
+                                pos1.y = y + y - 2;
+                                pos2.x = x + x - 1;
+                                pos2.y = y + y - 2;
+                                pos3.x = x + x - 2;
+                                pos3.y = y + y - 1;
+                                pos4.x = x + x - 1;
+                                pos4.y = y + y - 1;
                                 tile1.position = pos1;
                                 tile2.position = pos2;
                                 tile3.position = pos3;
@@ -334,10 +336,35 @@ namespace Factorio_Image_Converter
             }
             Debug.WriteLine("saved JSON to \""+path+"\"");
         }
-        private void ConvertJSONToBlueprint(string path)
+        private void CompressAndEncodeJSON(string path)
         {
             //compress the JSON file using zlib deflate compression level 9, then convert to base64 and put '0' at the start
-
+            string json;
+            StreamReader streamReader = new StreamReader(path);
+            json = streamReader.ReadToEnd();
+            UTF8Encoding encoding = new UTF8Encoding();
+            byte[] jsonArray = encoding.GetBytes(json);
+            byte[] compressedArray;
+            using (MemoryStream memoryStream = new MemoryStream())
+            {
+                using (ZOutputStream zOutput = new ZOutputStream(memoryStream, zlibConst.Z_DEFAULT_COMPRESSION))
+                {
+                    using(Stream stream = new MemoryStream(jsonArray))
+                    {
+                        byte[] buffer = new byte[2000];
+                        int len;
+                        while ((len = stream.Read(buffer, 0, 2000)) > 0)
+                        {
+                            zOutput.Write(buffer, 0, len);
+                        }
+                        zOutput.Flush();
+                        zOutput.finish();
+                        compressedArray = memoryStream.ToArray();
+                    }
+                }
+            }
+            Blueprint = "0" + Convert.ToBase64String(compressedArray);
+            Debug.WriteLine("\n\n Blueprint \n" + Blueprint);
             /*
             using (FileStream jsonFileStream = File.OpenRead(path))
             {
@@ -469,7 +496,7 @@ namespace Factorio_Image_Converter
         {
             ConvertImageToBlocks(ResultImage);       //This will convert only available colors in the image to blocks, so for now input can be only made from those colors
             ConvertBlocksToJSON(@"..\..\Blueprint.json");
-            ConvertJSONToBlueprint(@"..\..\Blueprint.json");
+            CompressAndEncodeJSON(@"..\..\Blueprint.json");
 
             
         }
